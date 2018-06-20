@@ -1,0 +1,36 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "Esse desafio testará as principais habilidades que um desenvolvedor front-end deve possuir.",
+  "main": "./src/index.html",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress -p",
+    "watch": "npm run build -- --watch",
+    "server": "./node_modules/.bin/webpack-dev-server --inline --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliveirajunior90/front-end-challenge.git"
+  },
+  "author": "Almir Júnior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliveirajunior90/front-end-challenge/issues"
+  },
+  "homepage": "https://github.com/oliveirajunior90/front-end-challenge#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "uglifyjs-webpack-plugin": "^1.2.6",
+    "webpack": "^4.12.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
