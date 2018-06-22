@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Módulos JS</title>
 </head>
-<body>
-
-    <ul>
+<body ng-app="app">
+    {{1}}
+    <ul >
+        {{nome}}
         <li><a href="#!/">home</a></li>
         <li><a href="#!/artist">artists</a></li>
     </ul>
     
     <div ng-view></div>
-
     <script src="bundle.js"></script>
+    
 </body>
 </html>

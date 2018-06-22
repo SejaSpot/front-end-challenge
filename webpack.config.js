@@ -1,32 +1,21 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const path = require('path');
-
 module.exports = {
-  entry: './src/app/app.js',
-  mode: 'development',
-  
-  output: {
-    filename: './src/bundle.js',
-  },
 
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: '/node_modules/',
-        loader: 'babel-loader',
+    mode: "development",
+
+    context: __dirname + '/app',
+
+    entry: './app.js',
+
+    output: {
+        path: __dirname + '/app',
+        filename: 'bundle.js'
+    },
+
+    module: {
+        rules: [
+          /*{ test: /\.css$/, use: 'css-loader' },*/
+          {test: /\.js$/, use: 'babel-loader', exclude:'/node_modules/' }
+        ]
       }
-    ]  
-  },
-
-  plugins: [
-
-    new UglifyJsPlugin({
-        sourceMap: true
-    })
-      
-  ]
 
 }
-
-console.log(path.resolve(__dirname, 'src/'));
