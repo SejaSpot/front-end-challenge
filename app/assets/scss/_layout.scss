@@ -1,0 +1,136 @@
+.top5, 
+.top-songs {
+    @include sectionGutter();    
+}
+
+.top5 {
+
+    @media(min-width: 991px) {
+        &__artist-link:hover .artist__description__name,
+        &__artist-link:hover .artist__description__count {
+            padding-left:10px;
+        }
+
+        &__artist-link:hover .artist {
+            background: #33333340;
+        }
+    }
+}
+
+.artist {
+    background: green;
+    height:250px;
+    position: relative;
+    transition:background 0.2s ease-in;
+    -webkit-transition:background 0.2s ease-in;
+    -moz-transition:background 0.2s ease-in;
+
+    &__description__name,
+    &__description__count {
+        padding-left: 0;
+        transition:padding-left 0.3s ease-in;
+        -webkit-transition:padding-left 0.3s ease-in;
+        -moz-transition:padding-left 0.3s ease-in;
+    }
+
+    &__description {
+        position: absolute;
+        bottom:0;
+        width:100%;
+        background: #090909a8;
+        color: white;
+        padding: 10px 17px;
+
+        &__name {
+            font-size: 2.3rem;
+            @include fontMedium();
+        }
+
+        &__count {
+            font-size: 1.5rem;
+            @include fontLight();
+        }
+
+    }
+
+    @media (max-width: 991px) {
+        margin-bottom: 30px;
+    }
+}
+
+#top-songs-carousel .carousel-indicators{
+    bottom: -52px;
+}
+
+.song {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 4px 0;
+    color:white;
+
+    &__name {
+        font-size: 2.2rem;
+        margin-bottom: 7px;
+    }
+
+    &__artist {
+        font-size: 1.7rem;
+    }
+}
+
+.top-songs {
+    background: #080809;
+}
+
+
+
+.title-default {
+    @include fontMedium();
+    margin-top: 0;
+    margin-bottom: 50px;
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 5rem;
+
+    &__highlight {
+        color: #d51007
+    }
+
+    &--light {
+        color:white;
+    }
+
+    &--dark {
+        color:#2f2f2f;
+    }
+}
+
+
+footer {
+
+    @include fontMedium();
+    color: #2f2f2f;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 2rem;
+    line-height: 62px;
+    
+    & .footer__logo {
+        float: right;
+    }
+
+    @media (max-width:991px) {
+
+        text-align: center;
+
+        & .footer__logo {
+            float: none;
+        }
+    }
+
+}
+
+
+
+
+

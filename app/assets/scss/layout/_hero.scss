@@ -1,0 +1,29 @@
+.hero {
+    
+    text-align: center;
+    padding: 215px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:white;
+
+    &__title {
+        @include mainH1('white');
+    }
+
+    &__description {
+        @include mainText();
+    }
+
+    @media (max-width:991px) {
+        padding: 100px 0px;
+    }
+
+}
+
+.hero--home {
+    background-image:url('../img/img_hero.jpg');
+}
+
+.hero--artist {
+    background:#000;
+}

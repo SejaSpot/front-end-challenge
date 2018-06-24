@@ -2,18 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Módulos JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="assets/img/fav.png" />
+    <title>SPOT.fm</title>
 </head>
 <body ng-app="app">
-    {{1}}
-    <ul >
-        {{nome}}
-        <li><a href="#!/">home</a></li>
-        <li><a href="#!/artist">artists</a></li>
-    </ul>
+
+    <header class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="topbar__logo">
+                        <img src="assets/img/logotipo.png" alt="spot.fm">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="topbar__form">
+                        <label for="input"></label>
+                        <input type="text" placeholder="BUSCAR POR UM ARTISTA">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     
     <div ng-view></div>
-    <!--<script src="vendors.bundle.js"></script>-->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    © 2018 SPOT.fm Ltd. Todos os direitos reservados
+                </div>
+                <div class="col-sm-12 col-md-6"><img class="footer__logo" src="assets/img/logotipo_footer.png" alt="spot.fm"></div>
+            </div>
+        </div>
+    </footer>
+    
     <script src="bundle.js"></script>
     
 </body>

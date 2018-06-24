@@ -1,0 +1,80 @@
+.topbar {
+    padding: 20px 0;  
+
+    &__form {
+        
+        margin-top: 14px;
+        float: right;
+        width: 350px;
+
+    }
+
+    &__form label {
+
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: 2px;
+            left: 17px;
+            content:'';
+            width:19px;
+            height:19px;
+            background: url("../img/icon_zoom.png") no-repeat;
+            z-index: 99;
+            background-size: 100%;
+            /* height: 21px; */
+        }
+    }
+    
+    &__form input {
+        float: right;
+        padding: 9px 0;
+        border: 2px solid #d51007;
+        border-radius: 18px;
+        width: 100%;
+        text-indent: 50px;
+        color: #d51007;
+        position: relative;
+        letter-spacing: 1.2px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: pink;
+        @include placeholder();
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+        color: pink;
+        @include placeholder();
+        }
+
+        &::-ms-input-placeholder { /* IE 10+ */
+        color: pink;
+        @include placeholder();
+        }
+
+        &::-moz-placeholder { /* Firefox 18- */
+        color: pink;
+        @include placeholder();
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        &__form {
+            margin: 25px auto 32px;
+            float:none;
+        }
+
+        &__logo {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    
+}
