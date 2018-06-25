@@ -1,5 +1,7 @@
-const artistController = function($scope) {
-    $scope.nome = 'almir'
+const artistController = () => {
+
+    
+
 }
 
 export default artistController
