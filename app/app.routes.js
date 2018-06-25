@@ -4,13 +4,15 @@ const routeApp = function($routeProvider){
     .when("/", {
         templateUrl : "./components/home/home.html",
         controller: 'homeController',
+        controllerAs: 'vm'
     })
     .when("/artist", {
         templateUrl : "./components/artist/artist.html",
-        controller: "artistController"
+        controller: "artistController",
+        controllerAs: 'vm'
     })
     .otherwise({
-        redirectTo : "/"
+        redirectTo : "/",
     })
 
 }
