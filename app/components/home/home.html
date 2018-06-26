@@ -20,60 +20,16 @@
 
         <div class="row no-gutters" >
 
-            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-6">
-                <a class="top5__artist-link" href="#">
-                    <div class="artist">
-                        <div class="artist__description" ng-style="{
-                            'background-image': 'url('+ vm.image[3]['#text'] +')',
-                            'background-position': 'center center',
-                            'backgroun-repeat': no-repeat, 
-                            'background-size': 'cover'}">
-                            <div class="artist__description__name">{{vm.objects[0].name}}</div>
-                            <div class="artist__description__count">{{vm.objects[0].listeners}}</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8" 
+                ng-class="$index < 2 ? 'col-md-6': 'col-md-4'"
+                ng-repeat="data in vm.objects">
 
-            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-6">
                 <a class="top5__artist-link" href="#">
-                    <div class="artist">
+                    <div class="artist" ng-style="{
+                        'background-image': 'url('+data.image[3]['#text']+')'}">
                         <div class="artist__description">
-                            <div class="artist__description__name">{{vm.objects[1].name}}</div>
-                            <div class="artist__description__count">{{vm.objects[1].listeners}}</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4">
-                <a class="top5__artist-link" href="#">
-                    <div class="artist">
-                        <div class="artist__description">
-                            <div class="artist__description__name">{{vm.objects[2].name}}</div>
-                            <div class="artist__description__count">{{vm.objects[2].listeners}}</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4">
-                <a class="top5__artist-link" href="#">
-                    <div class="artist">
-                        <div class="artist__description">
-                            <div class="artist__description__name">{{vm.objects[3].name}}</div>
-                            <div class="artist__description__count">{{vm.objects[3].listeners}}</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4">
-                <a class="top5__artist-link" href="#">
-                    <div class="artist">
-                        <div class="artist__description">
-                            <div class="artist__description__name">{{vm.objects[4].name}}</div>
-                            <div class="artist__description__count">{{vm.objects[4].listeners}}</div>
+                            <div class="artist__description__name">{{data.name}}</div>
+                            <div class="artist__description__count">{{data.listeners}}</div>
                         </div>
                     </div>
                 </a>

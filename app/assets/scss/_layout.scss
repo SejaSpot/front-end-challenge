@@ -12,17 +12,19 @@
         }
 
         &__artist-link:hover .artist {
-            background: #33333340;
+           opacity: 0.7;
         }
     }
 }
 
 .artist {
-    height:250px;
+    height:350px;
     position: relative;
-    transition:background 0.2s ease-in;
-    -webkit-transition:background 0.2s ease-in;
-    -moz-transition:background 0.2s ease-in;
+    
+
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-size: cover;
 
     &__description__name,
     &__description__count {
@@ -33,6 +35,11 @@
     }
 
     &__description {
+
+        transition:background 0.2s ease-in;
+        -webkit-transition:background 0.2s ease-in;
+        -moz-transition:background 0.2s ease-in;
+
         position: absolute;
         bottom:0;
         width:100%;
