@@ -22,14 +22,14 @@
 
             <div class="col-sm-offset-2 col-md-offset-0 col-sm-8" 
                 ng-class="$index < 2 ? 'col-md-6': 'col-md-4'"
-                ng-repeat="data in vm.objects">
+                ng-repeat="data in vm.topArtists">
 
                 <a class="top5__artist-link" href="#">
                     <div class="artist" ng-style="{
-                        'background-image': 'url('+data.image[3]['#text']+')'}">
+                        'background-image': 'url('+data.image+')'}">
                         <div class="artist__description">
                             <div class="artist__description__name">{{data.name}}</div>
-                            <div class="artist__description__count">{{data.listeners}}</div>
+                            <div class="artist__description__count">{{data.listeners}} ouvintes</div>
                         </div>
                     </div>
                 </a>
@@ -62,6 +62,22 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="row">
+                                <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4" ng-repeat="data in vm.topTracks">
+
+                                    <div class="song">
+                                        <div class="song__artist__image">
+                                            <img src="{{data.image}}" alt="{{data.name}}">
+                                        </div>
+
+                                        <div class="song__description">
+                                            <div class="song__name">{{data.name}}</div>
+                                            <div class="song__artist">{{data.artist}}</div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                                <!--
                                 <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4">
 
                                     <div class="song">
@@ -93,22 +109,7 @@
                                     </div>
 
                                 </div>
-
-                                <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4">
-
-                                    <div class="song">
-                                        <div class="song__artist-image">
-
-                                        </div>
-
-                                        <div class="song__description">
-                                            <div class="song__name">Four Out of Five</div>
-                                            <div class="song__artist">Artic Monkeys</div>
-                                        </div>
-                                        
-                                    </div>
-
-                                </div>
+                                -->
                             </div>
                         </div>
                         
