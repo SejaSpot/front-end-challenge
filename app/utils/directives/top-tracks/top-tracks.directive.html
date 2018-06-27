@@ -1,0 +1,15 @@
+<div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4" ng-repeat="data in vm.topTracks">
+
+    <div class="song">
+        <div class="song__artist__image">
+            <img src="{{data.image}}" alt="{{data.name}}">
+        </div>
+
+        <div class="song__description">
+            <div class="song__name">{{data.name}}</div>
+            <div class="song__artist">{{data.artist}}</div>
+        </div>
+        
+    </div>
+
+</div>

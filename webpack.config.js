@@ -1,10 +1,11 @@
 const webpack = require('webpack')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 
 module.exports = {
 
     mode: "development",
-    devtool: 'source-map',
+    devtool: 'eval-source-map',
     context: __dirname + '/app',
 
     entry: './app.js',
@@ -12,7 +13,7 @@ module.exports = {
     output: {
         path: __dirname + '/app/assets/dist',
         filename: 'bundle.js',
-        publicPath: '/assets/dist' 
+        publicPath: '/assets/dist', 
     },
 
     module: {
@@ -38,7 +39,8 @@ module.exports = {
         new webpack.ProvidePlugin({
            $: "jquery",
            jQuery: "jquery"
-       })
+       }),
+
     ]
 
 }

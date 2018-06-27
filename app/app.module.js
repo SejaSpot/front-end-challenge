@@ -10,9 +10,9 @@ import artistController from './components/artist/artistController'
 
 const app = angular.module('app', [ngRoute])
     .config(routeApp)
+    .constant('config', config)
     .controller('homeController', homeController)
     .controller('artistController', artistController)
-    .constant('config', config)
     .service('artistService', artistService)
     
 export default app
