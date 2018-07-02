@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(6, 95px);
+    grid-template-columns: repeat(12, 95px);
     grid-template-rows: repeat(5, 95px);
     grid-gap: 0;
 
@@ -19,40 +19,80 @@
       position: relative;
       display: block;
 
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+
       &:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 4;
       }
 
       &:nth-child(2) {
         grid-column-start: 4;
         grid-column-end: 7;
-        grid-row-start: 1;
-        grid-row-end: 4;
       }
 
       &:nth-child(3) {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 6;
+        grid-column-start: 7;
+        grid-column-end: 10;
       }
 
       &:nth-child(4) {
-        grid-column-start: 3;
-        grid-column-end: 5;
+        grid-column-start: 10;
+        grid-column-end: 13;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9),
+      &:nth-child(10) {
         grid-row-start: 4;
         grid-row-end: 6;
       }
 
       &:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      &:nth-child(6) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+
+      &:nth-child(7) {
         grid-column-start: 5;
         grid-column-end: 7;
-        grid-row-start: 4;
-        grid-row-end: 6;
       }
+
+      &:nth-child(8) {
+        grid-column-start: 7;
+        grid-column-end: 9;
+      }
+
+      &:nth-child(9) {
+        grid-column-start: 9;
+        grid-column-end: 11;
+      }
+
+      &:nth-child(10) {
+        grid-column-start: 11;
+        grid-column-end: 13;
+      }
+
+      // &:nth-child(5) {
+      //   grid-column-start: 5;
+      //   grid-column-end: 7;
+      //   grid-row-start: 4;
+      //   grid-row-end: 6;
+      // }
     }
   }
 

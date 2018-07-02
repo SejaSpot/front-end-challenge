@@ -10,7 +10,7 @@ function AppService($resource) {
           method: 'chart.gettopartists',
           api_key: apiKey,
           format: format,
-          limit: 5
+          limit: 10
         },
         {
           query: {
