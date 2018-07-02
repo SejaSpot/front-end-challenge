@@ -1,11 +1,19 @@
 .topbar {
     padding: 20px 0;  
 
+    &__search-results {
+        position: absolute;
+        background: white;
+        width: 100%;
+        top: 42px;
+    }
+
     &__form {
         
         margin-top: 14px;
         float: right;
         width: 350px;
+        position: relative;
 
     }
 

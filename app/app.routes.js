@@ -6,7 +6,7 @@ const routeApp = function($routeProvider){
         controller: 'homeController',
         controllerAs: 'vm'
     })
-    .when("/artist", {
+    .when("/artist/:id/:name", {
         templateUrl : "./components/artist/artist.html",
         controller: "artistController",
         controllerAs: 'vm'

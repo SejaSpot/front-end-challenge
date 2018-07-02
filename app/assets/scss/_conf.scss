@@ -25,14 +25,22 @@
 
 @mixin sectionGutter() {
     padding : 68px 0;
+
+    @media(max-width: 991px) {
+        padding : 38px 0 20px;
+    }
 }
 
 .container{
     max-width: 1697px;
 }
 
-.row.no-gutters > [class^="col-"],
-.row.no-gutters > [class*=" col-"] {
-  padding-right: 0;
-  padding-left: 0;
-}
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+ }
+ .row.no-gutters > [class^="col-"],
+ .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+ }

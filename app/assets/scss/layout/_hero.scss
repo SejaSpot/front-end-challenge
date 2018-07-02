@@ -1,17 +1,30 @@
 .hero {
     
     text-align: center;
-    padding: 215px 0;
     background-size: cover;
     background-repeat: no-repeat;
     color:white;
 
     &__title {
-        @include mainH1('white');
+        @include mainH1(white);
+        margin: 22px 0;
     }
 
     &__description {
         @include mainText();
+    }
+
+    &__thumbnail {
+        border: 3px solid #d51007;
+        border-radius: 50%;
+        max-width: 340px;
+        height: 340px;
+        padding: 17px;
+        margin: auto;
+
+        img {
+            border-radius: 50%;
+        }
     }
 
     @media (max-width:991px) {
@@ -21,9 +34,11 @@
 }
 
 .hero--home {
+    padding: 215px 0;
     background-image:url('../img/img_hero.jpg');
 }
 
 .hero--artist {
+    padding: 43px 0;
     background:#000;
 }
