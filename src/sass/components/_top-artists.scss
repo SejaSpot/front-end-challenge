@@ -1,11 +1,18 @@
-.artist-list {
+.top-artists {
+  text-align: center;
+
+  &__wrapper {
+    margin: 0 auto;
+    display: inline-block;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(5, 100px);
     grid-gap: 0;
 
     &-item {
@@ -57,9 +64,10 @@
     background-color: rgba(0,0,0,0.5);
     padding: 1rem;
     color: #FFF;
+    text-align: left;
   }
 
-  &__heading {
+  &__subheading {
     margin-top: 0;
     margin-bottom: 0.25rem;
   }
