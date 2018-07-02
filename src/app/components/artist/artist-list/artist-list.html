@@ -1,9 +1,14 @@
 <div class="artist-list">
-  <ul class="artist-list__list">
-    <li ng-repeat="topArtists in $ctrl.getTopArtists">
-      <pre ng-repeat="artist in topArtists.artist">
-        {{ artist.name }}
-      </pre>
+  <h2>Artistas mais escutados</h2>
+  <ul class="artist-list__list" ng-repeat="topArtists in $ctrl.getTopArtists">
+    <li class="artist-list__list-item" ng-repeat="artist in topArtists.artist">
+      <div class="artist-list__caption">
+        <h3 class="artist-list__heading">{{ artist.name }}</h3>
+        <span class="artist-list__text">{{ artist.listeners|number }} ouvintes</span>
+      </div>
+      <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}">
+        <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="artist-list__image" />
+      </div>
     </li>
   </ul>
 </div>

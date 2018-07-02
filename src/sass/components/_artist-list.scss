@@ -1,0 +1,71 @@
+.artist-list {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    grid-gap: 0;
+
+    &-item {
+      position: relative;
+      display: block;
+
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+
+      &:nth-child(2) {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 4;
+      }
+
+      &:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+
+      &:nth-child(4) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+
+      &:nth-child(5) {
+        grid-column-start: 5;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 6;
+      }
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    color: #FFF;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+}

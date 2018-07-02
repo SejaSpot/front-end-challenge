@@ -18,7 +18,7 @@ const paths = {
   dist: './dist/',
   scripts: [`${root}/app/**/*.js`, `!${root}/app/**/*.spec.js`],
   tests: `${root}/app/**/*.spec.js`,
-  styles: `${root}/sass/*.scss`,
+  styles: `${root}/sass/**/*.scss`,
   templates: `${root}/app/**/*.html`,
   modules: [
     'angular/angular.js',
@@ -62,7 +62,7 @@ gulp.task('modules', ['templates'], () => {
 // Compila SASS e gera style.css
 gulp.task('styles', () => {
   return gulp.src(paths.styles)
-    .pipe(sass({ outputStyle: 'compressed' }))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest(paths.dist + 'css/'));
 });
 
