@@ -1,0 +1,9 @@
+<div class="artist-list">
+  <ul class="artist-list__list">
+    <li ng-repeat="topArtists in $ctrl.getTopArtists">
+      <pre ng-repeat="artist in topArtists.artist">
+        {{ artist.name }}
+      </pre>
+    </li>
+  </ul>
+</div>

@@ -13,12 +13,15 @@
   "dependencies": {
     "angular": "^1.7.2",
     "angular-loader": "^1.7.2",
-    "angular-route": "^1.7.2"
+    "angular-resource": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.7.2",
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "browser-sync": "^2.24.5",
     "canonical-path": "0.0.2",
     "del": "^3.0.0",
