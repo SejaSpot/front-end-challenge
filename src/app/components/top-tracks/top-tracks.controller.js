@@ -1,13 +1,13 @@
-function TopTracksController(ChartService, $resource) {
+function TopTracksController(AppService, $resource) {
   const ctrl = this;
 
   ctrl.$onInit = function () {
-    ctrl.getTopTracks = ChartService
+    ctrl.getTopTracks = AppService
       .getTopTracks($resource)
       .query();
   };
 }
 
 angular
-  .module('components.chart')
+  .module('components.topTracks')
   .controller('TopTracksController', TopTracksController);

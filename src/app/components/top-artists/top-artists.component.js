@@ -4,5 +4,5 @@ var topArtists = {
 };
 
 angular
-  .module('components.chart')
+  .module('components.topArtists')
   .component('topArtists', topArtists);

@@ -1,4 +1,6 @@
 angular
   .module('components', [
-    'components.chart'
+    'components.topArtists',
+    'components.topTracks',
+    'components.artistSearch'
   ]);

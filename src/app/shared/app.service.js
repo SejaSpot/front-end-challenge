@@ -1,4 +1,4 @@
-function ChartService($resource) {
+function AppService($resource) {
   const url = 'http://ws.audioscrobbler.com/2.0/';
   const apiKey = '6f10969cae542adb145d7c3641d189e1';
   const format = 'json';
@@ -10,7 +10,6 @@ function ChartService($resource) {
           method: 'chart.gettopartists',
           api_key: apiKey,
           format: format,
-          page: 1,
           limit: 5
         },
         {
@@ -26,8 +25,23 @@ function ChartService($resource) {
           method: 'chart.gettoptracks',
           api_key: apiKey,
           format: format,
-          page: 1,
           limit: 9
+        },
+        {
+          query: {
+            method: 'GET',
+            isArray: false
+          }
+        });
+    },
+    searchArtist: function ($resource) {
+      return $resource(url,
+        {
+          method: 'artist.search',
+          api_key: apiKey,
+          format: format,
+          limit: 4,
+          artist: '@artist'
         },
         {
           query: {
@@ -40,5 +54,5 @@ function ChartService($resource) {
 }
 
 angular
-  .module('components.chart')
-  .factory('ChartService', ChartService);
+  .module('shared')
+  .factory('AppService', AppService);

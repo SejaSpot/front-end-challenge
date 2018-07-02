@@ -4,5 +4,5 @@ var topTracks = {
 };
 
 angular
-  .module('components.chart')
+  .module('components.topTracks')
   .component('topTracks', topTracks);
