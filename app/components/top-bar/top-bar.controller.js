@@ -7,7 +7,11 @@ const topBarController = function(artistService, $location) {
     vm.searchArtist = function(name) {
         artistService.searchArtist(name)
             .then(result => vm.artists = result)
-            .then(result => console.log(result))
+    }
+
+    vm.clearSearch = function() {
+
+        vm.artists = []
     }
 }
 

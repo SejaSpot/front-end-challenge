@@ -15,7 +15,7 @@
 
                     <div class="topbar__search-results">
                         <ul>
-                            <li ng-repeat='artist in vm.artists'><a href="#!/artist/{{artist.mbid}}/{{artist.name}}"><img src="{{artist.image}}">{{artist.name}}</a></li>
+                            <li ng-repeat='artist in vm.artists'><a ng-click="vm.clearSearch()" href="#!/artist/{{artist.mbid}}/{{artist.name}}"><img src="{{artist.image}}">{{artist.name}}</a></li>
                         </ul>
                     </div>
                     

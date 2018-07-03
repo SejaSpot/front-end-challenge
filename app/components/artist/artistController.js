@@ -12,7 +12,7 @@ const artistController = function(artistService, $routeParams){
 
     artistService.getTopAlbumsFromArtist($routeParams.name)
         .then(result => vm.topAlbums = result)
-        .then(result => console.log(result))
+        
 
     artistService.getTopTracksFromArtist($routeParams.name)
         .then(result => vm.topTracks = result)

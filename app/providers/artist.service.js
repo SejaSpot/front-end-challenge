@@ -61,12 +61,14 @@ const artistService = function($http, config) {
             .then(result => result.data.results.artistmatches.artist)
             .then(result => {
                 return result.map(result => {
-                    return {
-                        name: result.name,
-                        image: result.image[1]['#text'],
-                        mbid : result.mbid
-                    }
+                    if(result.mbid != "")
+                        return {
+                            name: result.name,
+                            image: result.image[1]['#text'],
+                            mbid : result.mbid
+                        }
                 })
+                //.filter(mbid != "")
             })
     }
 
