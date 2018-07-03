@@ -1,6 +1,22 @@
 $gray-900: #2f2f2f;
-$black: #000;
+$black: #080809;
 
 $primary: #d51007;
 
+$headings-font-weight: 700;
+
 $grid-gutter-width: 0;
+
+$link-hover-decoration: none;
+
+$input-color: $black;
+$input-border-color: $primary;
+$input-focus-border-color: darken($primary, 5%);
+$input-box-shadow: 0 none;
+$input-border-radius: 50px;
+$input-border-width: 2px;
+$input-focus-box-shadow: 0 none;
+$input-placeholder-color: $primary;
+
+$jumbotron-padding: 5rem;
+$jumbotron-bg: $black;

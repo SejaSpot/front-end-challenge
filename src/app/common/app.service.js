@@ -31,7 +31,7 @@ function AppService($resource) {
           method: 'chart.gettoptracks',
           api_key: apiKey,
           format: format,
-          limit: 10
+          limit: 9
         }
       );
     },

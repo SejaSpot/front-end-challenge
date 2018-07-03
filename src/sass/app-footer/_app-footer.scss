@@ -1,0 +1,23 @@
+.app-footer {
+  padding-top: 2rem;
+  margin-bottom: 1.5rem;
+
+  span {
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: right
+    }
+  }
+}

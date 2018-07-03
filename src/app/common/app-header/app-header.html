@@ -1,11 +1,19 @@
 <header class="app-header">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h3>Spot.fm</h3>
+    <div class="row align-items-center">
+      <div class="col-md-6 col-sm-5">
+        <div class="app-header__logo">
+          <h3 class="app-header__logo-heading">
+            <a ui-sref="home" title="{{ artist.name }}">
+              Spot.fm
+            </a>
+          </h3>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <artist-search></artist-search>
+      <div class="col-md-4 offset-md-2 col-sm-7">
+        <div class="app-header__search">
+          <artist-search></artist-search>
+        </div>
       </div>
     </div>
   </div>

@@ -21,10 +21,13 @@ const paths = {
   styles: `${root}/sass/style.scss`,
   templates: `${root}/app/**/*.html`,
   modules: [
+    'jquery/dist/jquery.js',
     'angular/angular.js',
     'angular-resource/angular-resource.js',
     'angular-sanitize/angular-sanitize.js',
-    'angular-ui-router/release/angular-ui-router.js'
+    'angular-ui-router/release/angular-ui-router.js',
+    'slick-carousel/slick/slick.js',
+    'angular-slick/dist/slick.js',
   ],
   static: [
     `${root}/index.html`,

@@ -1,9 +1,7 @@
 <section class="artist-search">
   <form novalidate ng-submit="$ctrl.submitForm()">
-    <div class="form-group">
-      <input class="form-control" ng-change="$ctrl.searchArtist()" ng-model="$ctrl.search" />
-    </div>
-    <input type="submit" value="OK" />
+    <input class="form-control artist-search__input" ng-change="$ctrl.searchArtist()" ng-model="$ctrl.search" placeholder="Buscar por um artista"
+    />
   </form>
 
   <div class="artist-search__wrapper" ng-repeat="result in $ctrl.searchResult">

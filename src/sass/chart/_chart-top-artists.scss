@@ -6,6 +6,12 @@
     display: inline-block;
   }
 
+  &__heading {
+    text-transform: uppercase;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
   &__caption {
     position: absolute;
     bottom: 0;
@@ -21,6 +27,12 @@
   &__subheading {
     margin-top: 0;
     margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;

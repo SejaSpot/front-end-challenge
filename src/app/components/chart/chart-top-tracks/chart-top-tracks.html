@@ -1,14 +1,28 @@
 <section class="chart-top-tracks">
-  <h2 class="chart-top-tracks__heading">Músicas mais escutadas</h2>
-  <div class="chart-top-tracks__wrapper">
-    <ul class="chart-top-tracks__list" ng-repeat="topTracks in $ctrl.chartTopTracks">
-      <li class="chart-top-tracks__list-item" ng-repeat="track in topTracks.track">
-        <div ng-repeat="image in track.image | filter: {size: 'medium'}: true">
-          <img src="{{ image['#text'] }}" alt="{{ track.name }}" class="chart-top-tracks__image" />
-        </div>
-        <h3 class="chart-top-tracks__subheading">{{ track.name }}</h3>
-        <span class="chart-top-tracks__text">{{ track.artist.name }}</span>
-      </li>
-    </ul>
+  <div class="container">
+    <h2 class="chart-top-tracks__heading">
+      <span class="text-primary">Músicas</span> mais escutadas
+    </h2>
+    <div class="chart-top-tracks__wrapper">
+      <ul class="list-unstyled chart-top-tracks__list" ng-repeat="topTracks in $ctrl.chartTopTracks">
+
+        <slick dots=true arrows=false infinite=true speed=250 slides-to-show=3 touch-move=true slides-to-scroll=3 responsive="$ctrl.breakpoints">
+          <li class="chart-top-tracks__list-item" ng-repeat="track in topTracks.track">
+
+            <div class="media chart-top-tracks__media">
+              <div ng-repeat="image in track.image | filter: {size: 'medium'}: true">
+                <img src="{{ image['#text'] }}" alt="{{ track.name }}" class="chart-top-tracks__image" />
+              </div>
+              <div class="media-body chart-top-tracks__media-body">
+                <h3 class="h6 chart-top-tracks__subheading">{{ track.name }}</h3>
+                <span class="chart-top-tracks__text">{{ track.artist.name }}</span>
+              </div>
+            </div>
+
+          </li>
+        </slick>
+
+      </ul>
+    </div>
   </div>
 </section>

@@ -1,0 +1,58 @@
+.chart-top-tracks {
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+
+  &__heading {
+    text-transform: uppercase;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__media {
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    margin: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__media-body {
+    margin-left: 1rem;
+    text-align: left;
+  }
+}
+
+// Estilos customizados para o Slick
+
+.slick-dots {
+  list-style: none;
+  padding: 0;
+
+  > li {
+    display: inline-block;
+
+    &+li {
+      margin-left: 0.5rem;
+    }
+
+    > button {
+      border: 0 none;
+      background-color: $white;
+      cursor: pointer;
+      line-height: 0;
+      font-size: 0;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 0.75rem;
+      opacity: .5;
+    }
+
+    &.slick-active > button {
+      opacity: 1;
+    }
+  }
+}
