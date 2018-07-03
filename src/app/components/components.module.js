@@ -3,5 +3,6 @@ angular
     'components.topArtists',
     'components.topTracks',
     'components.artistSearch',
-    'components.artistInfo'
+    'components.artistInfo',
+    'components.topAlbums'
   ]);

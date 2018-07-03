@@ -50,7 +50,7 @@ function AppService($resource) {
     getTopAlbums: function ($resource) {
       return $resource(url,
         {
-          method: 'artist.gettopalbum',
+          method: 'artist.gettopalbums',
           api_key: apiKey,
           format: format,
           artist: '@artist',

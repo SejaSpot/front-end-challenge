@@ -1,0 +1,18 @@
+<section class="top-albums">
+  <h2 class="top-albums__heading">Álbuns principais</h2>
+  <div class="top-albums__wrapper">
+    <ul class="top-albums__list" ng-repeat="topAlbums in $ctrl.getTopAlbums">
+      <li class="top-albums__list-item" ng-repeat="album in topAlbums.album">
+        <a href="#" title="{{ album.name }}">
+          <div class="top-albums__caption">
+            <h3 class="top-albums__subheading">{{ album.name }}</h3>
+            <span class="top-albums__text">{{ album.playcount|number }} reproduções</span>
+          </div>
+          <div ng-repeat="image in album.image | filter: {size: 'extralarge'}: true">
+            <img src="{{ image['#text'] }}" alt="{{ album.name }}" class="top-albums__image" />
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
