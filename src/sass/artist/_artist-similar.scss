@@ -14,8 +14,8 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(8, 300px);
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(8, 100%);
     grid-gap: 0;
 
     @include media-breakpoint-up(sm) {
@@ -34,8 +34,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-template-columns: repeat(8, 142.5px);
-      grid-template-rows: repeat(1, 142.5px);
+      grid-template-columns: repeat(8, 100%);
+      grid-template-rows: repeat(1, 100%);
     }
 
     &-item {

@@ -14,8 +14,8 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(5, 300px);
+    grid-template-columns: repeat(1, 100%);
+    grid-template-rows: repeat(5, 100%);
     grid-gap: 0;
 
     @include media-breakpoint-up(sm) {
