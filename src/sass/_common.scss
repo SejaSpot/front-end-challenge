@@ -29,16 +29,16 @@
   border-radius: 0;
   color: $white;
   text-align: center;
-  word-break: normal;
-
-  @include media-breakpoint-up(sm) {
-    word-break: break-word;
-  }
-
+  
   &__heading {
     font-size: 3rem;
     margin-bottom: 1.25rem;
     text-transform: uppercase;
+    word-break: normal;
+
+    @include media-breakpoint-up(sm) {
+      word-break: break-word;
+    }
   }
 
   &__text {
