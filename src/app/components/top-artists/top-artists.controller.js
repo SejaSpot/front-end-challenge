@@ -4,7 +4,7 @@ function TopArtistsController(AppService, $resource) {
   ctrl.$onInit = function () {
     ctrl.getTopArtists = AppService
       .getTopArtists($resource)
-      .query();
+      .get();
   };
 }
 

@@ -3,7 +3,7 @@
   <div class="top-tracks__wrapper">
     <ul class="top-tracks__list" ng-repeat="topTracks in $ctrl.getTopTracks">
       <li class="top-tracks__list-item" ng-repeat="track in topTracks.track">
-        <div ng-repeat="image in track.image | filter: {size: 'medium'}">
+        <div ng-repeat="image in track.image | filter: {size: 'medium'}: true">
           <img src="{{ image['#text'] }}" alt="{{ track.name }}" class="top-tracks__image" />
         </div>
         <h3 class="top-tracks__subheading">{{ track.name }}</h3>

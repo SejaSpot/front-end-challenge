@@ -23,6 +23,7 @@ const paths = {
   modules: [
     'angular/angular.js',
     'angular-resource/angular-resource.js',
+    'angular-sanitize/angular-sanitize.js',
     'angular-ui-router/release/angular-ui-router.js'
   ],
   static: [

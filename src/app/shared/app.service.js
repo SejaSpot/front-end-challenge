@@ -4,36 +4,6 @@ function AppService($resource) {
   const format = 'json';
 
   return {
-    getTopArtists: function ($resource) {
-      return $resource(url,
-        {
-          method: 'chart.gettopartists',
-          api_key: apiKey,
-          format: format,
-          limit: 10
-        },
-        {
-          query: {
-            method: 'GET',
-            isArray: false
-          }
-        });
-    },
-    getTopTracks: function ($resource) {
-      return $resource(url,
-        {
-          method: 'chart.gettoptracks',
-          api_key: apiKey,
-          format: format,
-          limit: 10
-        },
-        {
-          query: {
-            method: 'GET',
-            isArray: false
-          }
-        });
-    },
     searchArtist: function ($resource) {
       return $resource(url,
         {
@@ -42,13 +12,53 @@ function AppService($resource) {
           format: format,
           limit: 4,
           artist: '@artist'
-        },
+        }
+      );
+    },
+    getTopArtists: function ($resource) {
+      return $resource(url,
         {
-          query: {
-            method: 'GET',
-            isArray: false
-          }
-        });
+          method: 'chart.gettopartists',
+          api_key: apiKey,
+          format: format,
+          limit: 10
+        }
+      );
+    },
+    getTopTracks: function ($resource) {
+      return $resource(url,
+        {
+          method: 'chart.gettoptracks',
+          api_key: apiKey,
+          format: format,
+          limit: 10
+        }
+      );
+    },
+    getArtistInfo: function ($resource) {
+      return $resource(url,
+        {
+          method: 'artist.getinfo',
+          api_key: apiKey,
+          format: format,
+          artist: '@artist',
+          autocorrect: 1,
+          lang: 'pt'
+        }
+      );
+    },
+    getTopAlbums: function ($resource) {
+      return $resource(url,
+        {
+          method: 'artist.gettopalbum',
+          api_key: apiKey,
+          format: format,
+          artist: '@artist',
+          autocorrect: 1,
+          lang: 'pt',
+          limit: 5
+        }
+      );
     },
   }
 }

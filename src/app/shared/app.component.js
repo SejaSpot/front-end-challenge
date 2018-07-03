@@ -1,6 +1,5 @@
 var app = {
-  templateUrl: './app.html',
-  controller: 'AppController'
+  templateUrl: './app.html'
 };
 
 angular
@@ -13,7 +12,7 @@ angular
         component: 'app'
       })
       .state('artist-info', {
-        url: '/artista',
+        url: '/artista/:name',
         component: 'artistInfo'
       });
     $urlRouterProvider.otherwise('/');

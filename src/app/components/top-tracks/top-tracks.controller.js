@@ -4,7 +4,7 @@ function TopTracksController(AppService, $resource) {
   ctrl.$onInit = function () {
     ctrl.getTopTracks = AppService
       .getTopTracks($resource)
-      .query();
+      .get();
   };
 }
 

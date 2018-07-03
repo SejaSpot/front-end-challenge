@@ -17,6 +17,7 @@
     "angular-loader": "^1.7.2",
     "angular-resource": "^1.7.2",
     "angular-route": "^1.7.2",
+    "angular-sanitize": "^1.7.2",
     "angular-ui-router": "^1.0.18",
     "bootstrap": "^4.1.1",
     "normalize.css": "^8.0.0"
