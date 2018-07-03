@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-regular-webfont.woff2') format('woff2'),
+       url('firasans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/firasans-bold-webfont.woff2') format('woff2'),
+       url('../fonts/firasans-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -5,6 +21,29 @@
   @include media-breakpoint-up(sm) {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.jumbotron {
+  margin-bottom: 1rem;
+  border-radius: 0;
+  color: $white;
+  text-align: center;
+  word-break: normal;
+
+  @include media-breakpoint-up(sm) {
+    word-break: break-word;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    margin-bottom: 0;
   }
 }
 
@@ -78,21 +117,10 @@
   }
 }
 
-.jumbotron {
-  margin-bottom: 1rem;
-  border-radius: 0;
-  color: $white;
-  text-align: center;
-
-  &__heading {
-    font-size: 3rem;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    word-break: break-all;
-  }
-
-  &__text {
-    font-size: 1.25rem;
-    margin-bottom: 0;
+.chart {
+  &__jumbotron {
+    background: url('../img/banner.jpg') center left no-repeat scroll $black;
+    background-size: cover;
+    text-shadow: 0 0 10px $black;
   }
 }

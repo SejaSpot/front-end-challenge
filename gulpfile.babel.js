@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import concat from 'gulp-concat';
 import wrap from 'gulp-wrap';
-import uglify from 'gulp-uglify';
+import uglify from 'gulp-uglify-es';
 import htmlmin from 'gulp-htmlmin';
 import gulpif from 'gulp-if';
 import sass from 'gulp-sass';
@@ -60,7 +60,9 @@ gulp.task('templates', () => {
 gulp.task('modules', ['templates'], () => {
   return gulp.src(paths.modules.map(item => 'node_modules/' + item))
     .pipe(concat('vendor.js'))
-    .pipe(gulpif(argv.deploy, uglify()))
+    .pipe(gulpif(argv.deploy, uglify().on('error', function (e) {
+      console.log(e);
+    })))
     .pipe(gulp.dest(paths.dist + 'js/'));
 });
 
@@ -82,7 +84,9 @@ gulp.task('scripts', ['modules'], () => {
     .pipe(wrap('(function(angular){\n\'use strict\';\n<%= contents %>})(window.angular);'))
     .pipe(concat('bundle.js'))
     .pipe(ngAnnotate())
-    .pipe(gulpif(argv.deploy, uglify()))
+    .pipe(gulpif(argv.deploy, uglify().on('error', function (e) {
+      console.log(e);
+    })))
     .pipe(gulp.dest(paths.dist + 'js/'));
 });
 
@@ -118,5 +122,6 @@ gulp.task('default', [
 
 gulp.task('production', [
   'copy',
-  'scripts'
+  'scripts',
+  'styles'
 ]);

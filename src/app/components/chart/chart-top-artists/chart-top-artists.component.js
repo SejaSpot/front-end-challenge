@@ -1,4 +1,4 @@
-var chartTopArtists = {
+const chartTopArtists = {
   templateUrl: './chart-top-artists.html',
   controller: 'ChartTopArtistsController'
 };

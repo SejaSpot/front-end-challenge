@@ -1,4 +1,4 @@
-var root = {
+const root = {
   templateUrl: './root.html'
 };
 

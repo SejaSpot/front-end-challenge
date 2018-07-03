@@ -1,4 +1,4 @@
-var appHeader = {
+const appHeader = {
   templateUrl: './app-header.html'
 };
 

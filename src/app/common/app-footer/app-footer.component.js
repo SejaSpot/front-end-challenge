@@ -1,4 +1,4 @@
-var appFooter = {
+const appFooter = {
   templateUrl: './app-footer.html',
   controller: 'AppFooterController'
 };

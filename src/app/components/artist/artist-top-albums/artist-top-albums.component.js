@@ -1,4 +1,4 @@
-var artistTopAlbums = {
+const artistTopAlbums = {
   templateUrl: './artist-top-albums.html',
   controller: 'ArtistTopAlbumsController'
 };

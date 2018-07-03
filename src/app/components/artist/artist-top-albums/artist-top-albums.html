@@ -5,7 +5,7 @@
     <ol class="artist-top-albums__list" ng-repeat="topAlbums in $ctrl.artistTopAlbums">
       <li class="artist-top-albums__list-item" ng-repeat="album in topAlbums.album">
 
-        <div class="box__link" title="{{ artist.name }}">
+        <div class="box__link" title="{{ album.name }}">
           <div class="box__caption">
             <h3 class="box__heading">{{ album.name }}</h3>
             <span class="box__text">{{ album.playcount|number }} reproduções</span>

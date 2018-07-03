@@ -1,4 +1,4 @@
-var artistSimilar = {
+const artistSimilar = {
   templateUrl: './artist-similar.html',
   controller: 'ArtistSimilarController'
 };

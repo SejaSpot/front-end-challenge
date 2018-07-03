@@ -1,4 +1,4 @@
-var artistInfo = {
+const artistInfo = {
   templateUrl: './artist-info.html',
   controller: 'ArtistInfoController'
 };

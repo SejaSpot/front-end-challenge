@@ -1,4 +1,4 @@
-var chart = {
+const chart = {
   templateUrl: './chart.html'
 };
 

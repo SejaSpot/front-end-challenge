@@ -2,6 +2,9 @@
   &__input {
     font-weight: bold;
     text-transform: uppercase;
+    background: url('../img/search.svg') left 8px center no-repeat scroll transparent;
+    background-size: 24px;
+    padding-left: 42px;
   }
 
   &__dropdown {

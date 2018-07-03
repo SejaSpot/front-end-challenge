@@ -1,4 +1,4 @@
-var artistSearch = {
+const artistSearch = {
   templateUrl: './artist-search.html',
   controller: 'ArtistSearchController'
 };

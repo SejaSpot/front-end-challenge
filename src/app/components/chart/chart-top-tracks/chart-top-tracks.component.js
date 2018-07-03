@@ -1,4 +1,4 @@
-var chartTopTracks = {
+const chartTopTracks = {
   templateUrl: './chart-top-tracks.html',
   controller: 'ChartTopTracksController'
 };

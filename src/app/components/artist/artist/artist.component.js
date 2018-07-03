@@ -1,4 +1,4 @@
-var artist = {
+const artist = {
   templateUrl: './artist.html'
 };
 
