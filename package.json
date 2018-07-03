@@ -11,11 +11,13 @@
   "license": "MIT",
   "repository": "https://github.com/glauberm/front-end-challenge",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.18",
     "angular": "^1.7.2",
     "angular-i18n": "^1.7.2",
     "angular-loader": "^1.7.2",
     "angular-resource": "^1.7.2",
     "angular-route": "^1.7.2",
+    "angular-ui-router": "^1.0.18",
     "bootstrap": "^4.1.1",
     "normalize.css": "^8.0.0"
   },

@@ -1,2 +1,5 @@
 angular
-  .module('shared', []);
+  .module('shared', [
+    'ngResource',
+    'ui.router'
+  ]);

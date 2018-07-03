@@ -22,7 +22,8 @@ const paths = {
   templates: `${root}/app/**/*.html`,
   modules: [
     'angular/angular.js',
-    'angular-resource/angular-resource.js'
+    'angular-resource/angular-resource.js',
+    'angular-ui-router/release/angular-ui-router.js'
   ],
   static: [
     `${root}/index.html`,

@@ -6,6 +6,32 @@
     display: inline-block;
   }
 
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1rem;
+    color: #FFF;
+    text-align: left;
+    z-index: 1;
+  }
+
+  &__subheading {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    // transform: scale(1.05);
+  }
+
   &__list {
     list-style: none;
     margin: 0;
@@ -18,6 +44,7 @@
     &-item {
       position: relative;
       display: block;
+      overflow: hidden;
 
       &:nth-child(1),
       &:nth-child(2),
@@ -86,34 +113,6 @@
         grid-column-start: 11;
         grid-column-end: 13;
       }
-
-      // &:nth-child(5) {
-      //   grid-column-start: 5;
-      //   grid-column-end: 7;
-      //   grid-row-start: 4;
-      //   grid-row-end: 6;
-      // }
     }
-  }
-
-  &__caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: block;
-    background-color: rgba(0,0,0,0.5);
-    padding: 1rem;
-    color: #FFF;
-    text-align: left;
-  }
-
-  &__subheading {
-    margin-top: 0;
-    margin-bottom: 0.25rem;
-  }
-
-  &__image {
-    max-width: 100%;
-    height: auto;
   }
 }

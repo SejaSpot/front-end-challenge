@@ -5,7 +5,6 @@ function ArtistSearchController(AppService, $resource) {
     ctrl.result = AppService
       .searchArtist($resource)
       .query({ 'artist': ctrl.search });
-    // console.log(ctrl.search);
   };
 }
 

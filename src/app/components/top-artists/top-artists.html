@@ -4,7 +4,7 @@
     <ul class="top-artists__list" ng-repeat="topArtists in $ctrl.getTopArtists">
       <li class="top-artists__list-item" ng-repeat="artist in topArtists.artist">
         <div class="top-artists__caption">
-          <h3 class="top-artists__subheading">{{ artist.name }}</h3>
+          <h3 class="top-artists__subheading" title="{{ artist.name }}">{{ artist.name }}</h3>
           <span class="top-artists__text">{{ artist.listeners|number }} ouvintes</span>
         </div>
         <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}">

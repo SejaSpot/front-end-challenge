@@ -25,7 +25,7 @@ function AppService($resource) {
           method: 'chart.gettoptracks',
           api_key: apiKey,
           format: format,
-          limit: 9
+          limit: 10
         },
         {
           query: {
