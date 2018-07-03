@@ -1,6 +1,6 @@
 angular
   .module('root', [
-    'shared',
+    'common',
     'components',
     'templates'
   ]);

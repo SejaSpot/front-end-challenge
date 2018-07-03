@@ -1,0 +1,18 @@
+<section class="chart-top-artists">
+  <h2 class="chart-top-artists__heading">Artistas mais escutados</h2>
+  <div class="chart-top-artists__wrapper">
+    <ul class="chart-top-artists__list" ng-repeat="topArtists in $ctrl.chartTopArtists">
+      <li class="chart-top-artists__list-item" ng-repeat="artist in topArtists.artist">
+        <a ui-sref="artist-info({ name: artist.name })" title="{{ artist.name }}">
+          <div class="chart-top-artists__caption">
+            <h3 class="chart-top-artists__subheading">{{ artist.name }}</h3>
+            <span class="chart-top-artists__text">{{ artist.listeners|number }} ouvintes</span>
+          </div>
+          <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}: true">
+            <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="chart-top-artists__image" />
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

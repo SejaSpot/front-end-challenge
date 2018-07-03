@@ -1,0 +1,7 @@
+<section class="artist-info">
+  <div ng-repeat="image in $ctrl.artistInfo.artist.image | filter: {size: 'large'}: true">
+    <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="artist-info__image" />
+  </div>
+  <h1>{{ $ctrl.artistInfo.artist.name }}</h1>
+  <p ng-bind-html="$ctrl.artistInfo.artist.bio.summary"></p>
+</section>

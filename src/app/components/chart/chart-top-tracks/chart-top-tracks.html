@@ -1,0 +1,14 @@
+<section class="chart-top-tracks">
+  <h2 class="chart-top-tracks__heading">Músicas mais escutadas</h2>
+  <div class="chart-top-tracks__wrapper">
+    <ul class="chart-top-tracks__list" ng-repeat="topTracks in $ctrl.chartTopTracks">
+      <li class="chart-top-tracks__list-item" ng-repeat="track in topTracks.track">
+        <div ng-repeat="image in track.image | filter: {size: 'medium'}: true">
+          <img src="{{ image['#text'] }}" alt="{{ track.name }}" class="chart-top-tracks__image" />
+        </div>
+        <h3 class="chart-top-tracks__subheading">{{ track.name }}</h3>
+        <span class="chart-top-tracks__text">{{ track.artist.name }}</span>
+      </li>
+    </ul>
+  </div>
+</section>
