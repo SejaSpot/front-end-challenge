@@ -1,6 +1,4 @@
-# Spot.fm
-
-Para mais informações, [leia os comentários](COMMENTS.md).
+# [Spot.fm](https://glauberm.github.io/spot-fm)
 
 ## Features
 
@@ -8,5 +6,10 @@ Para mais informações, [leia os comentários](COMMENTS.md).
 - ui-router
 - SASS
 - BEM (CSS)
+- CSS Grid
 - Bootstrap 4
 - Slick
+
+## Mais informações
+
+Para mais informações, [leia os comentários](COMMENTS.md).

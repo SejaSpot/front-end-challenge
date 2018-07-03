@@ -34,8 +34,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-template-columns: repeat(8, 100%);
-      grid-template-rows: repeat(1, 100%);
+      grid-template-columns: repeat(8, 142.5px);
+      grid-template-rows: repeat(1, 142.5px);
     }
 
     &-item {
