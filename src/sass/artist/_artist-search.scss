@@ -1,0 +1,28 @@
+.artist-search {
+  &__input {
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url('../img/search.svg') left 8px center no-repeat scroll transparent;
+    background-size: 24px;
+    padding-left: 42px;
+  }
+
+  &__dropdown {
+    width: 100%;
+
+    &-item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-link {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+}

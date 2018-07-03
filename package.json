@@ -1,0 +1,49 @@
+{
+  "name": "spot-fm",
+  "version": "1.0.0",
+  "author": "Glauber Mota",
+  "description": "",
+  "scripts": {
+    "start": "gulp",
+    "test": "karma start",
+    "deploy": "gulp production --deploy"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/glauberm/front-end-challenge",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-resource": "^1.7.2",
+    "angular-sanitize": "^1.7.2",
+    "angular-slick": "0.0.0",
+    "angular-ui-router": "^1.0.18",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.7.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.5",
+    "canonical-path": "0.0.2",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.2.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-ng-annotate": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4",
+    "gulp-wrap": "^0.14.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "0.0.32",
+    "lodash": "^4.17.10",
+    "path": "^0.12.7",
+    "yargs": "^12.0.1"
+  }
+}

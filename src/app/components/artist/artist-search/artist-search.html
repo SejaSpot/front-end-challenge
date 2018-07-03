@@ -1,0 +1,16 @@
+<section class="artist-search">
+  <form novalidate ng-submit="$ctrl.submitForm()">
+    <input class="form-control artist-search__input" ng-change="$ctrl.searchArtist()" ng-model="$ctrl.search" placeholder="Buscar por um artista"
+    />
+  </form>
+
+  <div ng-repeat="result in $ctrl.searchResult">
+    <ul class="dropdown-menu show artist-search__dropdown" ng-repeat="artistmatches in result.artistmatches">
+      <li class="artist-search__dropdown-item" ng-repeat="artist in artistmatches">
+        <a class="dropdown-item artist-search__dropdown-link" ui-sref="artist({ name: artist.name })" title="{{ artist.name }}" ng-click="$ctrl.clickAnchor()">
+          {{ artist.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+.artist-info {
+  padding-top: 1.75rem;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  &__image {
+    border: 12px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0 4px $primary;
+  }
+}
