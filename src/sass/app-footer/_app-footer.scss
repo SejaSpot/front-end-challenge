@@ -6,6 +6,8 @@
     margin-bottom: 1rem;
     display: block;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 
     @include media-breakpoint-up(sm) {
       text-align: left;

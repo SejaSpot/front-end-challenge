@@ -1,23 +1,23 @@
-<section class="chart-top-artists">
+<section class="chart-top-artists box">
   <div class="container">
     <h2 class="chart-top-artists__heading">
       <span class="text-primary">Artistas</span> mais escutados
     </h2>
-    <div class="chart-top-artists__wrapper">
-      <ul class="chart-top-artists__list" ng-repeat="topArtists in $ctrl.chartTopArtists">
+    <div class="box__wrapper">
+      <ol class="chart-top-artists__list" ng-repeat="topArtists in $ctrl.chartTopArtists">
         <li class="chart-top-artists__list-item" ng-repeat="artist in topArtists.artist">
-          <a class="chart-top-artists__link" ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
-            <div class="chart-top-artists__caption">
-              <h3 class="h5 chart-top-artists__subheading">{{ artist.name }}</h3>
-              <span class="chart-top-artists__text">{{ artist.listeners|number }} ouvintes</span>
+          <a class="box__link" ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
+            <div class="box__caption">
+              <h3 class="box__heading">{{ artist.name }}</h3>
+              <span class="box__text">{{ artist.listeners|number }} ouvintes</span>
             </div>
             <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}: true">
-              <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="chart-top-artists__image" />
+              <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="box__image" />
             </div>
             <div class="bg"></div>
           </a>
         </li>
-      </ul>
+      </ol>
     </div>
   </div>
 </section>

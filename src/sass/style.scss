@@ -1,9 +1,13 @@
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "common";
 @import "app-header/app-header";
 @import "app-footer/app-footer";
-@import "chart/chart";
 @import "chart/chart-top-artists";
 @import "chart/chart-top-tracks";
 @import "artist/artist-search";
+@import "artist/artist-info";
+@import "artist/artist-top-tracks";
+@import "artist/artist-top-albums";
+@import "artist/artist-similar";

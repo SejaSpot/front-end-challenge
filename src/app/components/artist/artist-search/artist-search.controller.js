@@ -20,9 +20,16 @@ function ArtistSearchController(AppService, $resource, $state) {
       $state.go('artist', {
         'name': ctrl.search
       }).then(
-        ctrl.searchResult = null,
+        ctrl.search = null,
         ctrl.searchResult = null
       );
+    };
+
+    ctrl.clickAnchor = function () {
+      // Ao clicar no link,
+      // limpa o input e o resultado
+      ctrl.search = null;
+      ctrl.searchResult = null;
     };
   };
 }

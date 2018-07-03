@@ -1,17 +1,24 @@
-<section class="similar-artist">
-  <h2 class="similar-artist__heading">Artistas parecidos</h2>
-  <div class="similar-artist__wrapper">
-    <ul class="similar-artist__list" ng-repeat="artists in $ctrl.artistSimilar">
-      <li class="similar-artist__list-item" ng-repeat="artist in artists.artist">
-        <a ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
-          <div class="similar-artist__caption">
-            <h3 class="similar-artist__subheading">{{ artist.name }}</h3>
-          </div>
-          <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}: true">
-            <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="similar-artist__image" />
-          </div>
-        </a>
-      </li>
-    </ul>
+<section class="artist-similar box">
+  <div class="container">
+    <h2 class="artist-similar__heading">
+      Artistas parecidos
+    </h2>
+    <div class="box__wrapper">
+      <ul class="artist-similar__list" ng-repeat="artists in $ctrl.artistSimilar">
+
+        <li class="artist-similar__list-item" ng-repeat="artist in artists.artist">
+          <a class="box__link" ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
+            <div class="box__caption">
+              <h3 class="box__heading">{{ artist.name }}</h3>
+            </div>
+            <div ng-repeat="image in artist.image | filter: {size: 'extralarge'}: true">
+              <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="box__image" />
+            </div>
+            <div class="bg"></div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
   </div>
 </section>

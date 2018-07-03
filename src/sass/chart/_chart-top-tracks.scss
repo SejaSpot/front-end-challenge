@@ -24,6 +24,10 @@
     margin-left: 1rem;
     text-align: left;
   }
+
+  &__image {
+    border-radius: 50%;
+  }
 }
 
 // Estilos customizados para o Slick
@@ -36,7 +40,7 @@
     display: inline-block;
 
     &+li {
-      margin-left: 0.5rem;
+      margin-left: 0.75rem;
     }
 
     > button {

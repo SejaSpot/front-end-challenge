@@ -1,10 +1,17 @@
 <section class="artist-top-tracks">
   <h2 class="artist-top-tracks__heading">Faixas principais</h2>
-  <div class="artist-top-tracks__wrapper">
-    <ul class="artist-top-tracks__list" ng-repeat="topTracks in $ctrl.artistTopTracks">
-      <li class="artist-top-tracks__list-item" ng-repeat="track in topTracks.track">
-        <h3 class="artist-top-tracks__subheading">{{ track.name }}</h3>
-      </li>
-    </ul>
+  <div class="table-responsive">
+
+    <table class="table table-hover table-striped table-sm">
+      <tbody ng-repeat="topTracks in $ctrl.artistTopTracks">
+        <tr ng-repeat="track in topTracks.track">
+          <td class="artist-top-tracks__order">
+            <span class="text-muted">{{ $index + 1 }}</span>
+          </td>
+          <td>{{ track.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </section>

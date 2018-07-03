@@ -3,4 +3,23 @@
     font-weight: bold;
     text-transform: uppercase;
   }
+
+  &__dropdown {
+    width: 100%;
+
+    &-item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-link {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
 }

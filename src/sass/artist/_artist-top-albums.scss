@@ -1,0 +1,56 @@
+.artist-top-albums {
+  &__heading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+    }
+  }
+ 
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(5, 300px);
+    grid-gap: 0;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(4, 135px);
+      grid-template-rows: repeat(2, 135px);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 180px);
+      grid-template-rows: repeat(2, 180px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, 120px);
+      grid-template-rows: repeat(2, 120px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(4, 150px);
+      grid-template-rows: repeat(2, 150px);
+    }
+
+    &-item {
+      position: relative;
+      display: block;
+      overflow: hidden;
+
+      @include media-breakpoint-up(sm) {
+        &:nth-child(1) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 3;
+        }
+      }
+    }
+  }
+}

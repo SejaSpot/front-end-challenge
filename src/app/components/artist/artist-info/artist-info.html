@@ -1,7 +1,9 @@
-<section class="artist-info">
-  <div ng-repeat="image in $ctrl.artistInfo.artist.image | filter: {size: 'large'}: true">
-    <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="artist-info__image" />
+<section class="jumbotron artist-info">
+  <div class="container">
+    <div ng-repeat="image in $ctrl.artistInfo.artist.image | filter: {size: 'large'}: true">
+      <img src="{{ image['#text'] }}" alt="{{ artist.name }}" class="artist-info__image" />
+    </div>
+    <h1 class="jumbotron__heading">{{ $ctrl.artistInfo.artist.name }}</h1>
+    <p class="jumbotron__text" ng-bind-html="$ctrl.artistInfo.artist.bio.summary"></p>
   </div>
-  <h1>{{ $ctrl.artistInfo.artist.name }}</h1>
-  <p ng-bind-html="$ctrl.artistInfo.artist.bio.summary"></p>
 </section>

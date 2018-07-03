@@ -1,0 +1,47 @@
+.artist-similar {
+  &__heading {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(8, 300px);
+    grid-gap: 0;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 270px);
+      grid-template-rows: repeat(4, 270px);
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(4, 180px);
+      grid-template-rows: repeat(2, 180px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, 240px);
+      grid-template-rows: repeat(2, 240px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(8, 142.5px);
+      grid-template-rows: repeat(1, 142.5px);
+    }
+
+    &-item {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+  }
+}

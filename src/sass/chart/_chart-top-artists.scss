@@ -1,136 +1,43 @@
 .chart-top-artists {
-  text-align: center;
-
-  &__wrapper {
-    margin: 0 auto;
-    display: inline-block;
-  }
-
   &__heading {
     text-transform: uppercase;
     padding-top: 2rem;
     margin-bottom: 3rem;
   }
 
-  &__caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: block;
-    background-color: rgba(0,0,0,0.5);
-    padding: 1rem;
-    color: #FFF;
-    text-align: left;
-    z-index: 1;
-  }
-
-  &__subheading {
-    margin-top: 0;
-    margin-bottom: 0.25rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  &__image {
-    max-width: 100%;
-    height: auto;
-    transition: transform ease-out 0.3s;
-  }
-
-  &__link {
-    .bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $primary;
-      opacity: 0;
-      transition: opacity ease-out 0.5s;
-      mix-blend-mode: color;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      img {
-        transform: scale(1.05);
-      }
-
-      .bg {
-        opacity: .75;
-      }
-    }
-  }
-
   &__list {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(10, 300px);
+    grid-gap: 0;
 
     @include media-breakpoint-up(sm) {
-      display: grid;
       grid-template-columns: repeat(2, 270px);
       grid-template-rows: repeat(5, 270px);
-      grid-gap: 0;
     }
 
     @include media-breakpoint-up(md) {
-      display: grid;
       grid-template-columns: repeat(2, 300px);
       grid-template-rows: repeat(5, 300px);
-      grid-gap: 0;
     }
 
     @include media-breakpoint-up(lg) {
-      display: grid;
       grid-template-columns: repeat(12, 80px);
       grid-template-rows: repeat(5, 80px);
-      grid-gap: 0;
     }
 
     @include media-breakpoint-up(xl) {
-      display: grid;
       grid-template-columns: repeat(12, 95px);
       grid-template-rows: repeat(5, 95px);
-      grid-gap: 0;
     }
 
     &-item {
       position: relative;
       display: block;
       overflow: hidden;
-
-      @include media-breakpoint-up(md) {
-        &:nth-child(odd) {
-          grid-column-start: 1;
-          grid-column-end: 2;
-        }
-
-        &:nth-child(even) {
-          grid-column-start: 2;
-          grid-column-end: 3;
-        }
-
-        &:nth-child(1),
-        &:nth-child(2) {
-          grid-row-start: 1;
-          grid-row-end: 2;
-        }
-
-        &:nth-child(3),
-        &:nth-child(4) {
-          grid-row-start: 2;
-          grid-row-end: 3;
-        }
-      }
 
       @include media-breakpoint-up(lg) {
         &:nth-child(1),
