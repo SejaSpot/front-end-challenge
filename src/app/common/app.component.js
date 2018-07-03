@@ -9,7 +9,7 @@ angular
         url: '/',
         component: 'chart'
       })
-      .state('artist-info', {
+      .state('artist', {
         url: '/artista/:name',
         component: 'artist'
       });

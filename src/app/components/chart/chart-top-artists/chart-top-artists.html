@@ -3,7 +3,7 @@
   <div class="chart-top-artists__wrapper">
     <ul class="chart-top-artists__list" ng-repeat="topArtists in $ctrl.chartTopArtists">
       <li class="chart-top-artists__list-item" ng-repeat="artist in topArtists.artist">
-        <a ui-sref="artist-info({ name: artist.name })" title="{{ artist.name }}">
+        <a ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
           <div class="chart-top-artists__caption">
             <h3 class="chart-top-artists__subheading">{{ artist.name }}</h3>
             <span class="chart-top-artists__text">{{ artist.listeners|number }} ouvintes</span>

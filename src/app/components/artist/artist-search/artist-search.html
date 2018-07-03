@@ -4,7 +4,7 @@
   <div class="artist-search__wrapper" ng-repeat="result in $ctrl.searchResult">
     <ul class="artist-search__list" ng-repeat="artistmatches in result.artistmatches">
       <li class="artist-search__list-item" ng-repeat="artist in artistmatches">
-        <a ui-sref="artist-info({ name: artist.name })" title="{{ artist.name }}">
+        <a ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
           {{ artist.name }}
         </a>
       </li>

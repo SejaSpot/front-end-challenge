@@ -3,7 +3,7 @@
   <div class="similar-artist__wrapper">
     <ul class="similar-artist__list" ng-repeat="artists in $ctrl.artistSimilar">
       <li class="similar-artist__list-item" ng-repeat="artist in artists.artist">
-        <a ui-sref="artist-info({ name: artist.name })" title="{{ artist.name }}">
+        <a ui-sref="artist({ name: artist.name })" title="{{ artist.name }}">
           <div class="similar-artist__caption">
             <h3 class="similar-artist__subheading">{{ artist.name }}</h3>
           </div>
