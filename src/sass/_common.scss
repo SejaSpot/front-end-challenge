@@ -29,15 +29,15 @@
   border-radius: 0;
   color: $white;
   text-align: center;
-  
+
   &__heading {
     font-size: 3rem;
     margin-bottom: 1.25rem;
     text-transform: uppercase;
-    word-break: normal;
+    word-break: break-word;
 
-    @include media-breakpoint-up(sm) {
-      word-break: break-word;
+    @include media-breakpoint-up(md) {
+      word-break: normal;
     }
   }
 
