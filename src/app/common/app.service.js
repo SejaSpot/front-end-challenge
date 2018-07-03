@@ -1,5 +1,5 @@
 function AppService($resource) {
-  const url = 'http://ws.audioscrobbler.com/2.0/';
+  const url = 'https://ws.audioscrobbler.com/2.0/';
   const apiKey = '6f10969cae542adb145d7c3641d189e1';
   const format = 'json';
 
