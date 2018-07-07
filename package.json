@@ -1,0 +1,51 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "Esse desafio testará as principais habilidades que um desenvolvedor front-end deve possuir.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "webpack-dev-server",
+    "build": "webpack",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SejaSpot/front-end-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.2.0-6",
+    "@fortawesome/fontawesome-free-solid": "^5.1.0-3",
+    "angular": "^1.7.2",
+    "angular-resource": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-loader": "^8.0.0-beta.4",
+    "css-loader": "^0.28.11",
+    "eslint": "^5.0.1",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^4.0.0-alpha",
+    "image-webpack-loader": "^4.3.1",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "bugs": {
+    "url": "https://github.com/SejaSpot/front-end-challenge/issues"
+  },
+  "homepage": "https://github.com/SejaSpot/front-end-challenge#readme"
+}
