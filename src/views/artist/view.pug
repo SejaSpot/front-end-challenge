@@ -1,0 +1,50 @@
+.bg-dark.mb-3
+  .container.text-center.py-3.text-white
+    img.rounded-circle.border.border-danger.p-3.mb-3(ng-src="{{artist.image[2]['#text']}}")
+    h3.text-uppercase.font-weight-bold {{artist.name}}
+    p {{artist.bio.summary}}
+.container.mb-3
+  .row
+    .col-lg-5
+      h5.font-weight-bold.mb-3 Faixas principais
+      table.table.table-striped.table-sm
+        tbody
+          tr(ng-repeat="track in tracks")
+            td {{$index + 1}}
+            td
+              .fa.fa-play-circle
+            td
+              .fa.fa-heart
+            td.w-100 {{track.name}}
+      .text-right
+        a(href) Mais faixas
+    .col-lg-7
+      h5.font-weight-bold.mb-3 Álbuns principais
+      .row.no-gutters.mb-3
+        .col-6
+          .position-relative
+            img.w-100(ng-src="{{albums[0].image[3]['#text']}}")
+            .position-absolute.text-white.p-3.w-100.bg-dark-transparent(style="bottom:0")
+              .font-weight-bold {{albums[0].name}}
+              div {{albums[0].playcount}} ouvintes
+        .col-6
+          .row.no-gutters
+            .col-6(ng-repeat="album in albums.slice(1)")
+              .position-relative
+                img.w-100(ng-src="{{album.image[3]['#text']}}")
+                .position-absolute.text-white.p-3.w-100.bg-dark-transparent(style="bottom:0")
+                  .font-weight-bold {{album.name}}
+                  div {{album.playcount}} ouvintes
+      .text-right
+        a(href) Mais álbuns
+.container.mb-3
+  h5.font-weight-bold.mb-3 Artistas parecidos
+  .row.no-gutters.mb-3
+    .col-lg(ng-repeat="artist in artists")
+      a(ng-href="#!/artist/{{artist.name}}")
+        .position-relative
+          img.w-100(src="{{artist.image[3]['#text']}}")
+          .position-absolute.text-white.p-3.w-100.bg-dark-transparent(style="bottom:0")
+            .font-weight-bold {{artist.name}}
+  .text-right
+    a(href) Outros artistas parecidos
