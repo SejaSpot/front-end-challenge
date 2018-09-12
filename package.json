@@ -18,21 +18,21 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.2.0-6",
     "@fortawesome/fontawesome-free-solid": "^5.1.0-3",
-    "angular": "^1.7.3",
-    "angular-resource": "^1.7.3",
-    "angular-route": "^1.7.3",
+    "angular": "^1.7.4",
+    "angular-resource": "^1.7.4",
+    "angular-route": "^1.7.4",
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
-    "babel-loader": "^8.0.0",
+    "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
-    "eslint": "^5.4.0",
+    "eslint": "^5.5.0",
     "file-loader": "^2.0.0",
-    "html-webpack-plugin": "^4.0.0-alpha",
+    "html-webpack-plugin": "^4.0.0-alpha.2",
     "image-webpack-loader": "^4.3.1",
     "node-sass": "^4.9.3",
     "pug": "^2.0.3",
@@ -40,9 +40,9 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "url-loader": "^1.1.1",
-    "webpack": "^4.17.1",
+    "webpack": "^4.18.0",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.6"
+    "webpack-dev-server": "^3.1.8"
   },
   "bugs": {
     "url": "https://github.com/SejaSpot/front-end-challenge/issues"
