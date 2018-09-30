@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.1.0",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
-    "eslint": "^5.5.0",
+    "eslint": "^5.6.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^4.0.0-alpha.2",
     "image-webpack-loader": "^4.3.1",
