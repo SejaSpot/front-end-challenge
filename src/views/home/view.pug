@@ -1,0 +1,39 @@
+.text-center.mb-5
+  .w-100.py-5(style="background: url('https://picsum.photos/1900/300/?blur') no-repeat center; background-size: cover;")
+    .container.py-5.text-white
+      h3.font-weight-bold.text-uppercase Bem vindo ao Spot.FM
+      span.font-weight-bold Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.
+.mb-5.container
+  .text-center.mb-5
+    h3.font-weight-bold.text-uppercase.list-inline
+      .list-inline-item.text-danger Artistas
+      .list-inline-item mais escutados
+  .row.no-gutters
+    .mb-3.mb-lg-0(ng-repeat="artist in artists" ng-class="[0,1].includes($index) ? 'col-lg-6' : 'col-lg-4'")
+      a(ng-href="#!/artist/{{artist.name}}")
+        .position-relative
+          img.img-fluid.w-100(ng-src="{{artist.image[4]['#text']}}")
+          .position-absolute.text-white.p-3.w-100.bg-dark-transparent(style="bottom:0")
+            .font-weight-bold {{artist.name}}
+            div {{artist.listeners}} ouvintes
+.bg-dark.text-white.py-5
+  .container
+    .text-center.mb-5
+      h3.font-weight-bold.text-uppercase.list-inline
+        .list-inline-item.text-danger Músicas
+        .list-inline-item mais escutadas
+    #carousel.carousel.slide(data-ride="carousel" ng-init="slides = [].constructor(3)")
+      .carousel-inner.pb-5
+        .carousel-item(ng-repeat="slide in slides track by $index" ng-class="{active: $index === 0}")
+          .row
+            .col-lg-4.mb-3.mb-lg-0(ng-repeat="music in musics.slice($index * musics.length/slides.length, $index * musics.length/slides.length + slides.length)")
+              hr.my-0.bg-white
+              .row.my-1
+                .col-auto
+                  img.rounded-circle(ng-src="{{music.image[1]['#text']}}")
+                .col.align-self-center
+                  .font-weight-bold {{music.name}}
+                  span {{music.artist.name}}
+              hr.my-0.bg-white
+      .carousel-indicators
+        li(data-target="#carousel" ng-repeat="slide in slides track by $index" ng-class="{active: $index === 0}" data-slide-to="{{$index}}")
