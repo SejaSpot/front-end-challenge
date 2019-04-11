@@ -31,7 +31,7 @@ Desenvolva o HTML/CSS com base no layout (layout.psd || layout.jpg) proposto.
 - Forke esse repositório e faça seu desafio numa branch chamada ```seunome_ano-mes-dia``` (use dois dígitos para as informações numéricas).
 - Seu código deverá ser o mais semântico possível (títulos devem usar H1, H2, ..., parágrafos devem usar P, formulários devem estar dentro de uma tag FORM, e assim por diante).
 - Seu CSS não deverá ser inline (no arquivo HTML não deverá conter qualquer tipo de estilo). Todos os estilos devem estar num arquivo CSS externos ao HTML.
-- Assim que concluído o desafio, abra um pull request com suas alterações e envie um email para [tecnologia@sejaspot.com.br](mailto:tecnologia@sejaspot.com.br) entitulado ```Desafio Front-End``` contendo o link para o pull request.
+- Assim que concluído o desafio, abra um pull request com suas alterações e envie um email para [tecnologia@sejaspot.com.br](mailto:tecnologia@sejaspot.com.br) intitulado ```Desafio Front-End``` contendo o link para o pull request.
 
 
 
