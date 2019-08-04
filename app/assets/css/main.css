@@ -7,19 +7,32 @@
 }
 body{
 	font-family: 'Fira Sans', sans-serif;
+	color: #2f2f2f;
 }
 .container{
 	width: 80%;
 	margin: 0 auto;
 	max-width: 1664px;
 }
+.section-title{
+	text-align: center;
+	font-size: 60px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.section-title span{
+	color: #d51007;
+}
+
+
 
 
 
 header{
 	height: 123px;
 }
-header > .container{
+header > .container,
+footer > .container{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,3 +55,122 @@ header form input{
 header form input::placeholder{
 	color: #d51007;
 }
+
+
+
+
+
+.banner{
+	height: 690px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner.home{
+	background-image: url(../img/banner-home.png);
+}
+.banner .banner-txt{
+	color: #fff;
+	width: 1205px;
+	text-align: center;
+    margin-top: -30px;
+}
+.banner h1{
+	font-weight: 500;
+	font-size: 60px;
+	text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.banner p{
+	font-weight: 300;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+.most-listened{
+	padding: 71px 0 65px 0;
+}
+.most-listened ol{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.most-listened li{
+	display: flex;
+	align-items: flex-end;
+}
+.most-listened li.big-artist{
+    width: 50%;
+    height: 565px;
+}
+.most-listened li.small-artist{
+    height: 433px;
+    width: 33.3%;
+    width: calc(100% /3);
+}
+.most-listened li:nth-of-type(1){
+	background-color: red;
+}
+.most-listened li:nth-of-type(2){
+	background-color: blue;
+}
+.most-listened li:nth-of-type(3){
+	background-color: green;
+}
+.most-listened li:nth-of-type(4){
+	background-color: pink;
+}
+.most-listened li:nth-of-type(5){
+	background-color: bisque;
+}
+.most-listened .artist-and-listeners{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 22px;
+    color: #fff;
+}
+.most-listened .artist-and-listeners h3{
+	font-weight: 500;
+	font-size: 30px;
+}
+.most-listened .artist-and-listeners p{
+	font-weight: 300;
+	font-size: 24px;
+}
+
+
+
+
+
+
+
+
+
+footer{
+	height: 149px;
+}
+footer small{
+	font-size: 24px;
+	color: #2f2f2f;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+footer img{
+	height: 62px;
+}
+
+
+
+
