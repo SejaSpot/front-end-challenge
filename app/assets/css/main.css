@@ -1,0 +1,44 @@
+*,
+*:before,
+*:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Fira Sans', sans-serif;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+	max-width: 1664px;
+}
+
+
+
+header{
+	height: 123px;
+}
+header > .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+header form input{
+    border: 2px solid #d51007;
+    color: #d51007;
+    height: 50px;
+    width: 350px;
+    background-image: url(../img/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: 20px;
+    border-radius: 30px;
+    padding: 0 23px 0 66px;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+}
+header form input::placeholder{
+	color: #d51007;
+}
