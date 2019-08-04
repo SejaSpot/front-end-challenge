@@ -9,10 +9,17 @@ body{
 	font-family: 'Fira Sans', sans-serif;
 	color: #2f2f2f;
 }
+a{
+	text-decoration: none;
+	transition: text-decoration .3s ease;
+}
+a:hover{
+	text-decoration: underline;
+}
 .container{
-	width: 80%;
+	width: 100%;
 	margin: 0 auto;
-	max-width: 1664px;
+	max-width: 1668px;
 }
 .section-title{
 	text-align: center;
@@ -23,7 +30,14 @@ body{
 .section-title span{
 	color: #d51007;
 }
-
+.artist-name{
+	font-weight: 500;
+	font-size: 30px;
+}
+.subtitle{
+	font-weight: 300;
+	font-size: 24px;
+}
 
 
 
@@ -67,8 +81,6 @@ header form input::placeholder{
 	align-items: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.banner.home{
 	background-image: url(../img/banner-home.png);
 }
 .banner .banner-txt{
@@ -94,45 +106,45 @@ header form input::placeholder{
 
 
 
-.most-listened{
+.most-listened-artists{
 	padding: 71px 0 65px 0;
 }
-.most-listened ol{
+.most-listened-artists ol{
     list-style-type: none;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 60px;
 }
-.most-listened li{
+.most-listened-artists li{
 	display: flex;
 	align-items: flex-end;
 }
-.most-listened li.big-artist{
+.most-listened-artists li.big-artist{
     width: 50%;
     height: 565px;
 }
-.most-listened li.small-artist{
+.most-listened-artists li.small-artist{
     height: 433px;
     width: 33.3%;
     width: calc(100% /3);
 }
-.most-listened li:nth-of-type(1){
+.most-listened-artists li:nth-of-type(1){
 	background-color: red;
 }
-.most-listened li:nth-of-type(2){
+.most-listened-artists li:nth-of-type(2){
 	background-color: blue;
 }
-.most-listened li:nth-of-type(3){
+.most-listened-artists li:nth-of-type(3){
 	background-color: green;
 }
-.most-listened li:nth-of-type(4){
+.most-listened-artists li:nth-of-type(4){
 	background-color: pink;
 }
-.most-listened li:nth-of-type(5){
+.most-listened-artists li:nth-of-type(5){
 	background-color: bisque;
 }
-.most-listened .artist-and-listeners{
+.most-listened-artists .artist-and-listeners{
     background-color: rgba(0,0,0,0.3);
     width: 100%;
     height: 114px;
@@ -141,18 +153,57 @@ header form input::placeholder{
     padding: 20px 0 0 22px;
     color: #fff;
 }
-.most-listened .artist-and-listeners h3{
-	font-weight: 500;
-	font-size: 30px;
+
+
+
+
+
+
+
+
+.most-listened-songs{
+	background-color: #000;
+	height: 439px;
+	padding: 57px 0 48px 0;
+	color: #fff;
 }
-.most-listened .artist-and-listeners p{
-	font-weight: 300;
-	font-size: 24px;
+.most-listened-songs .swiper-container {
+	width: 100%;
+    height: 270px;
 }
-
-
-
-
+.most-listened-songs .swiper-container .swiper-slide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-pagination-bullet {
+    background: #9a9a9a;
+    opacity: .6;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e8e8e8;
+}
+.artist-music{
+	height: 122px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	width: 100%;
+	display: flex;
+    align-items: center;
+}
+.artist-music .artist-img{
+	border-radius: 100%;
+	height: 99px;
+	width: 99px;
+	background-color: red;
+}
+.artist-music .artist-info{
+	margin-left: 20px;
+}
+.artist-music .artist-info p{
+	
+}
 
 
 
@@ -174,3 +225,74 @@ footer img{
 
 
 
+
+
+
+.banner.home{
+	background-image: none;
+	background-color: #000;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.banner.home .banner-img{
+	width: 215px;
+    height: 215px;
+    background-color: #cecece;
+    border-radius: 100%;
+    border: 18px solid #000;
+    position: relative;
+    box-shadow: 0 0 0 10px #d51007;
+}
+.banner.home .banner-txt a{
+	color: #cb1007;
+}
+
+
+
+
+
+
+
+
+
+
+.artist-section-title{
+	font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.ver-mais{
+	align-self: flex-end;
+	color: #1753ac;
+	margin-top: 15px;
+}
+
+.similar-artists{
+	margin-top: 125px;
+}
+.similar-artists > .container{
+	display: flex;
+	flex-direction: column;
+}
+.similar-artists .artist-boxes{
+	display: flex;
+	flex-wrap: wrap;
+}
+.similar-artists .artist-boxes .box-artist{
+	width: 208.5px;
+	height: 208.5px;
+	padding: 0 0 15px 15px;
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+}
+.similar-artists .artist-boxes .box-artist .artist-name{
+	font-size: 18px;
+}
+.similar-artists .artist-boxes .box-artist:nth-child(even){
+	background-color: #6d4048;
+}
+.similar-artists .artist-boxes .box-artist:nth-child(odd){
+	background-color: #8c7f71;
+}

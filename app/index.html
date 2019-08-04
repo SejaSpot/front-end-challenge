@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Início</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="manifest" href="site.webmanifest"> -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/css/swiper.min.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<!-- Tive que invocar esses dois scripts no head pois os elementos dependentes do angular precisam do mesmo pra ser renderizados -->
+		<script src="assets/libs/jquery.min.js"></script>
+		<script src="assets/libs/angular.min.js"></script>
+	</head>
+	<body ng-app="" ng-init="logoImg = 'assets/img/logo.png'">
+		<div ng-include="'views/header.html'"></div>
+		<section class="banner">
+			<div class="banner-txt">
+				<h1>Bem vindo ao Spot.fm</h1>
+				<p>Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.</p>
+			</div>
+		</section>
+		<section class="most-listened-artists">
+			<div class="container">
+				<h2 class="section-title">
+				<span>Artistas</span> mais escutados
+				</h2>
+				<ol>
+					<li class="big-artist">
+						<div class="artist-and-listeners">
+							<h3>Nego do Borel</h3>
+							<p class="subtitle"><span>140.909</span> ouvintes</p>
+						</div>
+					</li>
+					<li class="big-artist">
+						<div class="artist-and-listeners">
+							<h3 class="artist-name">Nego do Borel</h3>
+							<p class="subtitle"><span>140.909</span> ouvintes</p>
+						</div>
+					</li>
+					<li class="small-artist">
+						<div class="artist-and-listeners">
+							<h3 class="artist-name">Nego do Borel</h3>
+							<p class="subtitle"><span>140.909</span> ouvintes</p>
+						</div>
+					</li>
+					<li class="small-artist">
+						<div class="artist-and-listeners">
+							<h3 class="artist-name">Nego do Borel</h3>
+							<p class="subtitle"><span>140.909</span> ouvintes</p>
+						</div>
+					</li>
+					<li class="small-artist">
+						<div class="artist-and-listeners">
+							<h3 class="artist-name">Nego do Borel</h3>
+							<p class="subtitle"><span>140.909</span> ouvintes</p>
+						</div>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<section class="most-listened-songs">
+			<div class="container">
+				<h2 class="section-title">
+				<span>Músicas</span> mais escutadas
+				</h2>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="artist-music">
+								<div class="artist-img"></div>
+								<div class="artist-info">
+									<h3 class="artist-name">Four Out of Five</h3>
+									<p class="subtitle">Arctic Monkeys</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<div ng-include="'views/footer.html'"></div>
+		<script src="assets/libs/swiper.min.js"></script>
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
