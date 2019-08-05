@@ -24,16 +24,16 @@
 		<script src="../assets/libs/jquery.min.js"></script>
 		<script src="../assets/libs/angular.min.js"></script>
 	</head>
-	<body ng-app="" ng-init="logoImg = '../assets/img/logo.png'">
+	<body ng-app="myApp" ng-init="logoImg = '../assets/img/logo.png'">
 		<div ng-include="'header.html'"></div>
 		<main class="main-artists">
 			<section class="banner banner-artist">
-				<div class="banner-img">
+				<div class="banner-img animated zoomIn">
 					
 				</div>
-				<div class="banner-txt">
-					<h1>Led Zeppelin</h1>
-					<p>Led Zeppelin foi uma banda de Londres, Inglaterra célebre pela sua inovação e influência no rock, além de ter sido a banda mais popular na década de 70. De acordo com o renomado Allmusic, o Led Zeppelin foi a banda de Heavy Metal definitiva. Não apenas por sua interpretação alta e esmagadora do blues - mas também pelo modo como eles incorporam mitologia, misticismo e uma variedade de outros gêneros (world music e folk principalmente britânicos) - em seu som. Eles acabaram... <a href="">leia mais</a></p>
+				<div class="banner-txt animated fadeIn" ng-controller="artistInfo">
+					<h1>{{ info.artist.name }}</h1>
+					<p>{{ artist.bio }}<a ng-href="{{ artist.bio.links.link.href }}">leia mais</a></p>
 				</div>
 			</section>
 			<div class="container container-songs-albuns">
@@ -221,6 +221,7 @@
 		</main>
 		<div ng-include="'footer.html'"></div>
 		<script src="../assets/libs/swiper.min.js"></script>
+		<script src="../assets/js/artist1.controller.js"></script>
 		<script src="../assets/js/script.js"></script>
 	</body>
 </html>
