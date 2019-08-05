@@ -16,17 +16,13 @@
 	color: #fff;
 	display: flex;
 	align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .similar-artists .artist-boxes .box-artist .artist-name{
 	font-size: 18px;
 }
-.similar-artists .artist-boxes .box-artist:nth-child(even){
-	background-color: #6d4048;
-}
-.similar-artists .artist-boxes .box-artist:nth-child(odd){
-	background-color: #8c7f71;
-}
-
 
 /*RESPONSIVE*/
 @media (max-width: 1750px){

@@ -16,6 +16,9 @@
     flex-direction: column;
     justify-content: flex-end;
     color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .main-albums .grid-item .album-play,
 .main-albums .grid-item .album-buy{
@@ -77,25 +80,6 @@
 .main-albums .grid-item .subtitle{
 	font-size: 15px;
 }
-.main-albums .grid-item:nth-of-type(1){
-	background-color: red;
-}
-.main-albums .grid-item:nth-of-type(2){
-	background-color: blue;
-}
-
-.main-albums .grid-item:nth-of-type(3){
-	background-color: green;
-}
-
-.main-albums .grid-item:nth-of-type(4){
-	background-color: pink;
-}
-
-.main-albums .grid-item:nth-of-type(5){
-	background-color: bisque;
-}
-
 
 
 

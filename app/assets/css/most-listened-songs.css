@@ -33,6 +33,9 @@
 	height: 99px;
 	width: 99px;
 	background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .artist-music .artist-info{
 	margin-left: 20px;

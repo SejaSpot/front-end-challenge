@@ -37,7 +37,7 @@
 					<span>Artistas</span> mais escutados
 					</h2>
 					<ol ng-controller="artistCtrl">
-						<a href="#!artist" ng-repeat="art in topArtists | limitTo: 5">
+						<a href="#!artist" ng-repeat="art in topArtists | limitTo: 5" ng-style="{'background-image': 'url({{ art.image[3]['#text'] }})'}">
 							<li>
 								<div class="artist-and-listeners">
 									<h3 class="artist-name">{{ art.name }}</h3>
@@ -57,7 +57,7 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide" ng-repeat="x in topTracks | limitTo: 9">
 								<div class="artist-music">
-									<div class="artist-img"></div>
+									<div class="artist-img" ng-style="{'background-image': 'url({{ x.image[3]['#text'] }})'}"></div>
 									<div class="artist-info">
 										<h3 class="artist-name">{{ x.name }}</h3>
 										<p class="subtitle">{{ x.artist.name }}</p>

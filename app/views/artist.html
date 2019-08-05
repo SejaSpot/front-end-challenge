@@ -24,11 +24,11 @@
 		<script src="../assets/libs/jquery.min.js"></script>
 		<script src="../assets/libs/angular.min.js"></script>
 	</head>
-	<body ng-app="myApp" ng-init="logoImg = '../assets/img/logo.png'">
-		<div ng-include="'header.html'"></div>
+	<body ng-app="myApp" ng-init="logoImg = '../assets/img/logo.png'" ng-cloak>
+		<div ng-include="'header.html'" ng-cloak></div>
 		<main class="main-artists">
 			<section class="banner banner-artist" ng-controller="infoCtrl">
-				<div class="banner-img animated zoomIn">
+				<div class="banner-img animated zoomIn" ng-style="{'background-image': 'url({{ infoArtist.image[2]['#text'] }})'}">
 					
 				</div>
 				<div class="banner-txt animated fadeIn">
@@ -55,7 +55,7 @@
 				<div class="main-albums">
 					<h2 class="artist-section-title">Álbuns principais</h2>
 					<div class="grid-albums" ng-controller="topAlbumsCtrl">
-						<div class="grid-item" ng-repeat="x in topAlbums | limitTo: 5">
+						<div class="grid-item" ng-repeat="x in topAlbums | limitTo: 5" ng-style="{'background-image': 'url({{ x.image[3]['#text'] }})'}">
 							<a href="" class="album-play"><i class="fas fa-play"></i></a>
 							<a href="" class="album-buy">
 								<i class="fas fa-shopping-cart"></i>
@@ -72,7 +72,7 @@
 				<div class="container">
 					<h2 class="artist-section-title">Artistas parecidos</h2>
 					<div class="artist-boxes" ng-controller="similarCtrl">
-						<a ng-href="{{ similarArtists.url }}" class="box-artist" ng-repeat="x in similarArtists | limitTo: 8">
+						<a ng-href="{{ similarArtists.url }}" class="box-artist" ng-repeat="x in similarArtists | limitTo: 8" ng-style="{'background-image': 'url({{ x.image[2]['#text'] }})'}">
 							<h3 class="artist-name">{{ x.name }}</h3>
 						</a>
 						
@@ -81,7 +81,7 @@
 				</div>
 			</section>
 		</main>
-		<div ng-include="'footer.html'"></div>
+		<div ng-include="'footer.html'" ng-cloak></div>
 		<script src="../assets/libs/swiper.min.js"></script>
 		<script src="../assets/js/artistinfo.controller.js"></script>
 		<script src="../assets/js/artist1.controller.js"></script>
