@@ -31,105 +31,24 @@
 				<div class="banner-img animated zoomIn">
 					
 				</div>
-				<div class="banner-txt animated fadeIn" ng-controller="artistInfo">
+				<div class="banner-txt animated fadeIn" ng-controller="artistInfoCtrl">
 					<h1>{{ info.artist.name }}</h1>
 					<p>{{ artist.bio }}<a ng-href="{{ artist.bio.links.link.href }}">leia mais</a></p>
 				</div>
 			</section>
 			<div class="container container-songs-albuns">
-				<div class="main-songs">
+				<div class="main-songs"  ng-controller="artistTopTracksCtrl">
 					<h2 class="artist-section-title">Faixas principais</h2>
 					<ol>
-						<li>
+						<li ng-repeat="x in artistTopTracks | limitTo: 10">
 							<button class="play reset-btn">
 							<i class="far fa-play-circle"></i>
 							</button>
 							<button class="heart reset-btn">
 							<i class="far fa-heart"></i>
 							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
-						<li>
-							<button class="play reset-btn">
-							<i class="far fa-play-circle"></i>
-							</button>
-							<button class="heart reset-btn">
-							<i class="far fa-heart"></i>
-							</button>
-							<span>Immigrant Song</span>
-						</li>
+							<span>{{ x.name }}</span>
+						</li>				
 					</ol>
 					<a href="" class="ver-mais">Mais faixas</a>
 				</div>
@@ -221,6 +140,7 @@
 		</main>
 		<div ng-include="'footer.html'"></div>
 		<script src="../assets/libs/swiper.min.js"></script>
+		<script src="../assets/js/teste.controller.js"></script>
 		<script src="../assets/js/artist1.controller.js"></script>
 		<script src="../assets/js/script.js"></script>
 	</body>
