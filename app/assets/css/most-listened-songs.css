@@ -1,6 +1,5 @@
 .most-listened-songs{
 	background-color: #000;
-	height: 439px;
 	padding: 57px 0 48px 0;
 	color: #fff;
 }
@@ -38,6 +37,78 @@
 .artist-music .artist-info{
 	margin-left: 20px;
 }
-.artist-music .artist-info p{
-	
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1366px){
+	.artist-music {
+    	height: 112px;
+	}
+	.artist-music .artist-img {
+    	height: 79px;
+    	width: 79px;
+	}
+	.artist-music .artist-info {
+    	margin-left: 15px;
+	}
+	.artist-music .artist-name{
+		font-size: 25px;
+	}
+	.artist-music .subtitle{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1024px){
+	.artist-name{
+		font-size: 25px;
+	}
+	.subtitle{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px){
+	.most-listened-songs .swiper-container {
+    	height: 220px;
+	}
+	.artist-music .artist-img {
+    	height: 69px;
+    	width: 69px;
+	}
+	.artist-music .artist-name {
+    	font-size: 20px;
+	}
+	.artist-music .subtitle {
+    	font-size: 16px;
+	}
+	.artist-music {
+	    height: 100px;
+	}
+}
+
+@media (max-width: 500px){
+	.most-listened-songs .swiper-container {
+    	height: 180px;
+	}
+}
+
+@media (max-width: 370px){
+	.most-listened-songs .swiper-container {
+    	height: 180px;
+	}
+	.artist-music .artist-img {
+    	height: 59px;
+    	width: 59px;
+	}
+	.artist-music {
+	    height: 90px;
+	}
+	.most-listened-songs .swiper-container {
+    	height: 165px;
+	}
+	.most-listened-songs {
+    	padding: 37px 0 28px 0;
+	}
 }

@@ -8,6 +8,25 @@ $(document).ready(function(){
     		el: '.swiper-pagination',
     		clickable: true,
       	},
+      	breakpoints: {
+      		1366: {
+      			spaceBetween: 30,
+      		},
+      		1024: {
+      			spaceBetween: 30,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+      		},
+      		768: {
+      			spaceBetween: 20,
+      		},
+      		500: {
+      			spaceBetween: 0,
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+      		},
+
+      	}
     });
 
 	$('.heart i').click(function(){
