@@ -20,6 +20,7 @@
 		<!-- Tive que invocar esses dois scripts no head pois os elementos dependentes do angular precisam do mesmo pra ser renderizados -->
 		<script src="assets/libs/jquery.min.js"></script>
 		<script src="assets/libs/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 	</head>
 	<body ng-app="myApp" ng-init="logoImg = 'assets/img/logo.png'">
 		<div ng-include="'views/header.html'"></div>
@@ -36,7 +37,7 @@
 					<span>Artistas</span> mais escutados
 					</h2>
 					<ol ng-controller="artistCtrl">
-						<a href="" ng-repeat="art in topArtists | limitTo: 5">
+						<a href="#!artist" ng-repeat="art in topArtists | limitTo: 5">
 							<li>
 								<div class="artist-and-listeners">
 									<h3 class="artist-name">{{ art.name }}</h3>
@@ -58,8 +59,8 @@
 								<div class="artist-music">
 									<div class="artist-img"></div>
 									<div class="artist-info">
-										<h3 class="artist-name">{{ x.artist.name }}</h3>
-										<p class="subtitle">{{ x.name }}</p>
+										<h3 class="artist-name">{{ x.name }}</h3>
+										<p class="subtitle">{{ x.artist.name }}</p>
 									</div>
 								</div>
 							</div>
@@ -76,5 +77,17 @@
 		<script src="assets/js/topartists.controller.js"></script>
 		<script src="assets/js/toptracks.controller.js"></script>
 		<script src="assets/js/script.js"></script>
+		<script>
+			// var app = angular.module("myApp", ["ngRoute"]);
+// app.config(function($routeProvider) {
+//     $routeProvider
+//     .when("/", {
+//         templateUrl : "../index.html"
+//     })
+//     .when("/artist", {
+//         templateUrl : "../views/artist.html"
+//     });
+// });
+		</script>
 	</body>
 </html>

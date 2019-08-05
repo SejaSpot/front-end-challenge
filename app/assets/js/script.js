@@ -31,11 +31,11 @@ $(document).ready(function(){
       	}
     });
 
-	$('.heart i').click(function(){
-		$(this).toggleClass('filled-heart').toggleClass('animated').toggleClass('heartBeat');
-	})
+	// $('.heart i').click(function(){
+	// 	$(this).toggleClass('filled-heart').toggleClass('animated').toggleClass('heartBeat');
+	// });
 
-$('.swiper-pagination-bullet:nth-of-type(1)').trigger('click');
+// $('.swiper-pagination-bullet:nth-of-type(1)').trigger('click');
   
 
 	// $('header form input').focus(function(){
