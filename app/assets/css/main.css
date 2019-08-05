@@ -8,6 +8,7 @@
 body{
 	font-family: 'Fira Sans', sans-serif;
 	color: #2f2f2f;
+	counter-reset: list;
 }
 a{
 	text-decoration: none;
@@ -38,7 +39,11 @@ a:hover{
 	font-weight: 300;
 	font-size: 24px;
 }
-
+.reset-btn{
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+}
 
 
 
@@ -247,6 +252,81 @@ footer img{
 .banner.home .banner-txt a{
 	color: #cb1007;
 }
+
+
+
+
+
+.container-songs-albuns{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 145px;
+}
+.main-songs{
+	width: 780px;
+    display: flex;
+    flex-direction: column;
+}
+.main-songs ol li{
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	height: 37px;
+	position: relative;
+}
+.main-songs ol li:before{
+	counter-increment: list;
+	content: counter(list);
+	color: #b6c0bf;
+	position: absolute;
+	left: 15px;
+}
+.main-songs ol li i{
+	font-size: 19px;
+	color: #b6c0bf;
+}
+.main-songs ol li:nth-child(even){
+	background-color: #f9f9f9;
+	border-top: 1px solid #ebebeb;
+	border-bottom: 1px solid #ebebeb;
+}
+.main-songs ol li .play{
+	opacity: 0;
+	transition: opacity .3s ease;
+	margin: 0 7px 0 40px;
+}
+.main-songs ol li .play i{
+	font-size: 26px;
+}
+.main-songs ol li .play:hover{
+	opacity: 1;
+}
+.main-songs ol li .heart{
+	margin-right: 15px;
+}
+.main-songs ol li .heart i{
+	transition: all .3s ease;
+}	
+.main-songs ol li .heart i:hover,
+.heart.filled-heart{
+	font-weight: 900;
+	color: #000;
+}
+.main-songs ol li span{
+	font-size: 18px;
+}
+
+
+
+
+.main-albums{
+	width: 768px;
+}
+.main-albums .grid-albums{
+	display: grid;
+}
+
+
 
 
 
