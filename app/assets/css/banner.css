@@ -1,0 +1,136 @@
+.banner{
+	height: 690px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: url(../img/banner-home.png);
+}
+.banner .banner-txt{
+	color: #fff;
+	width: 1205px;
+	text-align: center;
+    margin-top: -30px;
+}
+.banner h1{
+	font-weight: 500;
+	font-size: 60px;
+	text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.banner p{
+	font-weight: 300;
+	font-size: 30px;
+}
+
+
+
+
+.banner.banner-artist{
+	background-image: none;
+	background-color: #000;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.banner.banner-artist .banner-img{
+	width: 215px;
+    height: 215px;
+    background-color: #cecece;
+    border-radius: 100%;
+    border: 18px solid #000;
+    position: relative;
+    box-shadow: 0 0 0 10px #d51007;
+}
+.banner.banner-artist .banner-txt a{
+	color: #cb1007;
+}
+
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.banner {
+	    height: 630px;
+	}
+	.banner h1 {
+    	font-size: 54px;
+    	margin-bottom: 20px;
+	}
+	.banner p {
+    	font-size: 25px;
+	}
+	.banner .banner-txt {
+    	width: 955px;
+	}
+}
+
+@media (max-width: 1366px){
+	.banner {
+    	height: 500px;
+	}
+	.banner .banner-txt {
+    	width: 56%;
+	}
+	.banner h1 {
+    	font-size: 47px;
+    	margin-bottom: 15px;
+	}
+	.banner p {
+    	font-size: 20px;
+	}
+}
+
+@media (max-width: 1024px){
+	.banner {
+    	height: 400px;
+	}
+	.banner h1 {
+    	font-size: 35px;
+    	margin-bottom: 10px;
+	}
+	.banner p {
+    	font-size: 17px;
+	}
+}
+
+@media (max-width: 768px){
+	.banner {
+    	height: 340px;
+	}
+	.banner .banner-txt {
+    	width: 66%;
+	}
+	.banner h1 {
+    	font-size: 31px;
+	}
+	.banner p {
+    	font-size: 16px;
+	}
+}
+
+@media (max-width: 500px){
+	.banner .banner-txt {
+    	width: 100%;	
+    	padding: 0 30px;
+	}
+	.banner h1 {
+    	font-size: 28px;
+	}
+	.banner p {
+    	font-size: 15px;
+	}
+}
+
+@media (max-width: 370px){
+	.banner {
+    	height: 300px;
+	}
+	.banner h1 {
+    	font-size: 24px;
+	}
+	.banner p {
+    	font-size: 14px;
+	}
+}

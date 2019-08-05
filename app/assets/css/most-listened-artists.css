@@ -1,0 +1,129 @@
+.most-listened-artists{
+	padding: 71px 0 65px 0;
+}
+.most-listened-artists ol{
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.most-listened-artists li{
+	display: flex;
+	align-items: flex-end;
+    height: 100%;
+}
+.most-listened-artists a{
+    color: #fff;
+}
+.most-listened-artists a:hover{
+    text-decoration: none;
+}
+.most-listened-artists a:hover .artist-name{
+    text-decoration: underline;
+}
+.most-listened-artists a.big-artist{
+    width: 50%;
+    height: 565px;
+}
+.most-listened-artists a.small-artist{
+    height: 433px;
+    width: 33.3%;
+    width: calc(100% /3);
+}
+.most-listened-artists a:nth-of-type(1){
+	background-color: red;
+}
+.most-listened-artists a:nth-of-type(2){
+	background-color: blue;
+}
+.most-listened-artists a:nth-of-type(3){
+	background-color: green;
+}
+.most-listened-artists a:nth-of-type(4){
+	background-color: pink;
+}
+.most-listened-artists a:nth-of-type(5){
+	background-color: bisque;
+}
+.most-listened-artists .artist-and-listeners{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 22px;
+    color: #fff;
+}
+
+
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+    .most-listened-artists a.big-artist {
+        height: 515px;
+    }
+    .most-listened-artists a.small-artist {
+        height: 403px;
+    }
+}
+
+@media (max-width: 1366px){
+    .most-listened-artists {
+        padding: 55px 0 49px 0;
+    }
+    .most-listened-artists a.big-artist {
+        height: 455px;
+    }
+    .most-listened-artists a.small-artist {
+        height: 333px;
+    }    
+}
+
+@media (max-width: 1024px){
+    .most-listened-artists {
+        padding: 40px 0 35px 0;
+    }
+    .most-listened-artists a.big-artist {
+        height: 375px;
+    }
+    .most-listened-artists a.small-artist {
+        height: 273px;
+    }  
+    .most-listened-artists .artist-and-listeners {
+        height: 94px;
+    } 
+}
+
+@media (max-width: 768px){
+    .most-listened-artists ol {
+        margin-top: 40px;
+    }
+    .most-listened-artists .artist-and-listeners {
+        height: 84px;
+        padding: 20px 0 0 17px;
+    } 
+    .most-listened-artists a.big-artist {
+        height: 295px;
+    }
+    .most-listened-artists a.small-artist {
+        height: 203px;
+    }   
+}
+
+@media (max-width: 500px){
+    .most-listened-artists {
+        padding: 30px 0 25px 0;
+    }
+    .most-listened-artists a.big-artist {
+        height: 235px;
+    }
+    .most-listened-artists a.small-artist {
+        height: 173px;
+    }
+    .most-listened-artists .artist-and-listeners {
+        height: 60px;
+        padding: 15px 0 0 13px;
+    }
+}

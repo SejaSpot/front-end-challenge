@@ -1,0 +1,59 @@
+footer > .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+footer{
+	height: 149px;
+}
+footer small{
+	font-size: 24px;
+	color: #2f2f2f;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+footer img{
+	height: 62px;
+}
+
+
+/*RESPONSIVE*/
+@media (max-width: 1366px){
+    footer{
+        height: 105px;
+    }
+    footer a img {
+        height: 50px;
+    }
+	footer small {
+	    font-size: 20px;
+	}
+}
+
+@media (max-width: 1024px){
+    footer > .container {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+    footer a img {
+        height: 42px;
+    }
+	footer small {
+	    font-size: 16px;
+	}
+}
+
+@media (max-width: 768px){
+    footer a img {
+        height: 37px;
+    }
+}
+
+@media (max-width: 500px){
+	footer small {
+    	font-size: 14px;
+    	text-align: center;
+	}
+}

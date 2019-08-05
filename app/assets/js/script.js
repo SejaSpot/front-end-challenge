@@ -10,8 +10,19 @@ $(document).ready(function(){
       	},
     });
 
-	
-    
+	$('.heart i').click(function(){
+		$(this).toggleClass('filled-heart').toggleClass('animated').toggleClass('heartBeat');
+	})
+
+	// $('header form input').focus(function(){
+	// 	$(this).addClass('search-focus');
+	// });
+
+	// $('header form input').blur(function(){
+	// 	$(this).removeClass('search-focus');
+	// });
+
+
 });
 
 

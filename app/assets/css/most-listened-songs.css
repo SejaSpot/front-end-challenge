@@ -1,0 +1,43 @@
+.most-listened-songs{
+	background-color: #000;
+	height: 439px;
+	padding: 57px 0 48px 0;
+	color: #fff;
+}
+.most-listened-songs .swiper-container {
+	width: 100%;
+    height: 270px;
+}
+.most-listened-songs .swiper-container .swiper-slide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-pagination-bullet {
+    background: #9a9a9a;
+    opacity: .6;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e8e8e8;
+}
+.artist-music{
+	height: 122px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	width: 100%;
+	display: flex;
+    align-items: center;
+}
+.artist-music .artist-img{
+	border-radius: 100%;
+	height: 99px;
+	width: 99px;
+	background-color: red;
+}
+.artist-music .artist-info{
+	margin-left: 20px;
+}
+.artist-music .artist-info p{
+	
+}

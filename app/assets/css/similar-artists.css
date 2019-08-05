@@ -1,0 +1,28 @@
+.similar-artists{
+	margin-top: 125px;
+}
+.similar-artists > .container{
+	display: flex;
+	flex-direction: column;
+}
+.similar-artists .artist-boxes{
+	display: flex;
+	flex-wrap: wrap;
+}
+.similar-artists .artist-boxes .box-artist{
+	width: 208.5px;
+	height: 208.5px;
+	padding: 0 0 15px 15px;
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+}
+.similar-artists .artist-boxes .box-artist .artist-name{
+	font-size: 18px;
+}
+.similar-artists .artist-boxes .box-artist:nth-child(even){
+	background-color: #6d4048;
+}
+.similar-artists .artist-boxes .box-artist:nth-child(odd){
+	background-color: #8c7f71;
+}

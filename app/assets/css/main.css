@@ -43,300 +43,8 @@ a:hover{
 	cursor: pointer;
 	border: 0;
 	background-color: transparent;
+	outline: none;
 }
-
-
-
-header{
-	height: 123px;
-}
-header > .container,
-footer > .container{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 100%;
-}
-header form input{
-    border: 2px solid #d51007;
-    color: #d51007;
-    height: 50px;
-    width: 350px;
-    background-image: url(../img/search-icon.png);
-    background-repeat: no-repeat;
-    background-position: 20px;
-    border-radius: 30px;
-    padding: 0 23px 0 66px;
-    font-weight: 700;
-    font-size: 18px;
-    font-family: 'Fira Sans', sans-serif;
-}
-header form input::placeholder{
-	color: #d51007;
-}
-
-
-
-
-
-.banner{
-	height: 690px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-	background-image: url(../img/banner-home.png);
-}
-.banner .banner-txt{
-	color: #fff;
-	width: 1205px;
-	text-align: center;
-    margin-top: -30px;
-}
-.banner h1{
-	font-weight: 500;
-	font-size: 60px;
-	text-transform: uppercase;
-    margin-bottom: 25px;
-}
-.banner p{
-	font-weight: 300;
-	font-size: 30px;
-}
-
-
-
-
-
-
-
-.most-listened-artists{
-	padding: 71px 0 65px 0;
-}
-.most-listened-artists ol{
-    list-style-type: none;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
-}
-.most-listened-artists li{
-	display: flex;
-	align-items: flex-end;
-}
-.most-listened-artists li.big-artist{
-    width: 50%;
-    height: 565px;
-}
-.most-listened-artists li.small-artist{
-    height: 433px;
-    width: 33.3%;
-    width: calc(100% /3);
-}
-.most-listened-artists li:nth-of-type(1){
-	background-color: red;
-}
-.most-listened-artists li:nth-of-type(2){
-	background-color: blue;
-}
-.most-listened-artists li:nth-of-type(3){
-	background-color: green;
-}
-.most-listened-artists li:nth-of-type(4){
-	background-color: pink;
-}
-.most-listened-artists li:nth-of-type(5){
-	background-color: bisque;
-}
-.most-listened-artists .artist-and-listeners{
-    background-color: rgba(0,0,0,0.3);
-    width: 100%;
-    height: 114px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0 0 22px;
-    color: #fff;
-}
-
-
-
-
-
-
-
-
-.most-listened-songs{
-	background-color: #000;
-	height: 439px;
-	padding: 57px 0 48px 0;
-	color: #fff;
-}
-.most-listened-songs .swiper-container {
-	width: 100%;
-    height: 270px;
-}
-.most-listened-songs .swiper-container .swiper-slide{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.swiper-pagination-bullet {
-    background: #9a9a9a;
-    opacity: .6;
-}
-.swiper-pagination-bullet-active {
-    opacity: 1;
-    background: #e8e8e8;
-}
-.artist-music{
-	height: 122px;
-	border-top: 2px solid #fff;
-	border-bottom: 2px solid #fff;
-	width: 100%;
-	display: flex;
-    align-items: center;
-}
-.artist-music .artist-img{
-	border-radius: 100%;
-	height: 99px;
-	width: 99px;
-	background-color: red;
-}
-.artist-music .artist-info{
-	margin-left: 20px;
-}
-.artist-music .artist-info p{
-	
-}
-
-
-
-
-
-footer{
-	height: 149px;
-}
-footer small{
-	font-size: 24px;
-	color: #2f2f2f;
-	font-weight: 500;
-	text-transform: uppercase;
-}
-footer img{
-	height: 62px;
-}
-
-
-
-
-
-
-
-.banner.home{
-	background-image: none;
-	background-color: #000;
-	display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.banner.home .banner-img{
-	width: 215px;
-    height: 215px;
-    background-color: #cecece;
-    border-radius: 100%;
-    border: 18px solid #000;
-    position: relative;
-    box-shadow: 0 0 0 10px #d51007;
-}
-.banner.home .banner-txt a{
-	color: #cb1007;
-}
-
-
-
-
-
-.container-songs-albuns{
-	display: flex;
-	justify-content: space-between;
-	padding-top: 145px;
-}
-.main-songs{
-	width: 780px;
-    display: flex;
-    flex-direction: column;
-}
-.main-songs ol li{
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-	height: 37px;
-	position: relative;
-}
-.main-songs ol li:before{
-	counter-increment: list;
-	content: counter(list);
-	color: #b6c0bf;
-	position: absolute;
-	left: 15px;
-}
-.main-songs ol li i{
-	font-size: 19px;
-	color: #b6c0bf;
-}
-.main-songs ol li:nth-child(even){
-	background-color: #f9f9f9;
-	border-top: 1px solid #ebebeb;
-	border-bottom: 1px solid #ebebeb;
-}
-.main-songs ol li .play{
-	opacity: 0;
-	transition: opacity .3s ease;
-	margin: 0 7px 0 40px;
-}
-.main-songs ol li .play i{
-	font-size: 26px;
-}
-.main-songs ol li .play:hover{
-	opacity: 1;
-}
-.main-songs ol li .heart{
-	margin-right: 15px;
-}
-.main-songs ol li .heart i{
-	transition: all .3s ease;
-}	
-.main-songs ol li .heart i:hover,
-.heart.filled-heart{
-	font-weight: 900;
-	color: #000;
-}
-.main-songs ol li span{
-	font-size: 18px;
-}
-
-
-
-
-.main-albums{
-	width: 768px;
-}
-.main-albums .grid-albums{
-	display: grid;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 .artist-section-title{
 	font-size: 30px;
     font-weight: 400;
@@ -347,32 +55,71 @@ footer img{
 	color: #1753ac;
 	margin-top: 15px;
 }
+main.main-artists{
+	padding-bottom: 700px;
+}
 
-.similar-artists{
-	margin-top: 125px;
+
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.container {
+	    width: 90%;
+	}
+	.section-title {
+    	font-size: 53px;
+	}
 }
-.similar-artists > .container{
-	display: flex;
-	flex-direction: column;
+
+@media (max-width: 1366px){
+	.section-title {
+    	font-size: 42px;
+	}
 }
-.similar-artists .artist-boxes{
-	display: flex;
-	flex-wrap: wrap;
+
+@media (max-width: 1024px){
+	.container {
+	    width: 100%;
+	    padding: 0 30px;
+	}
+	.section-title {
+    	font-size: 37px;
+	}
+	.artist-name{
+		font-size: 25px;
+	}
+	.subtitle{
+		font-size: 20px;
+	}
 }
-.similar-artists .artist-boxes .box-artist{
-	width: 208.5px;
-	height: 208.5px;
-	padding: 0 0 15px 15px;
-	color: #fff;
-	display: flex;
-	align-items: flex-end;
+
+@media (max-width: 768px){
+	.section-title {
+    	font-size: 32px;
+	}
+	.artist-name{
+		font-size: 17px;
+	}
+	.subtitle{
+		font-size: 13px;
+	}
 }
-.similar-artists .artist-boxes .box-artist .artist-name{
-	font-size: 18px;
+
+@media (max-width: 500px){
+	.section-title {
+    	font-size: 25.5px;
+	}
+	.artist-name{
+		font-size: 14px;
+	}
+	.subtitle{
+		font-size: 10px;
+	}
 }
-.similar-artists .artist-boxes .box-artist:nth-child(even){
-	background-color: #6d4048;
-}
-.similar-artists .artist-boxes .box-artist:nth-child(odd){
-	background-color: #8c7f71;
+
+@media (max-width: 370px){
+	.section-title {
+    	font-size: 21.3px;
+	}
 }

@@ -1,0 +1,59 @@
+.main-albums{
+	width: 768px;
+	display: flex;
+	flex-direction: column;
+}
+.main-albums .grid-albums{
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 50% 50%;
+	height: 384px;
+}
+.main-albums .grid-item{
+	display: flex;
+	align-items: flex-end;
+	padding: 0 0 18px 15px;
+}
+.main-albums .grid-item:nth-of-type(1){
+	grid-column: span 2;
+    grid-row: span 2;
+}
+.main-albums .grid-item a{
+	color: #fff;
+}
+.main-albums .grid-item a:hover{
+	text-decoration: none;
+}
+.main-albums .grid-item a:hover h3{
+	text-decoration: underline;
+}
+.main-albums .grid-item:nth-of-type(1) .artist-name{
+	font-size: 23px;
+}
+.main-albums .grid-item:nth-of-type(1) .subtitle{
+	font-size: 18px;
+}
+.main-albums .grid-item .artist-name{
+	font-size: 18px;
+}
+.main-albums .grid-item .subtitle{
+	font-size: 15px;
+}
+.main-albums .grid-item:nth-of-type(1){
+	background-color: red;
+}
+.main-albums .grid-item:nth-of-type(2){
+	background-color: blue;
+}
+
+.main-albums .grid-item:nth-of-type(3){
+	background-color: green;
+}
+
+.main-albums .grid-item:nth-of-type(4){
+	background-color: pink;
+}
+
+.main-albums .grid-item:nth-of-type(5){
+	background-color: bisque;
+}
