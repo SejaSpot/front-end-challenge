@@ -1,0 +1,117 @@
+.most-listened-songs{
+	background-color: #000;
+	padding: 57px 0 48px 0;
+	color: #fff;
+}
+.most-listened-songs .swiper-container {
+	width: 100%;
+    height: 270px;
+}
+.most-listened-songs .swiper-container .swiper-slide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.swiper-pagination-bullet {
+    background: #9a9a9a;
+    opacity: .6;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e8e8e8;
+}
+.artist-music{
+	height: 122px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	width: 100%;
+	display: flex;
+    align-items: center;
+}
+.artist-music .artist-img{
+	border-radius: 100%;
+	height: 99px;
+	width: 99px;
+	background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.artist-music .artist-info{
+	margin-left: 20px;
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1366px){
+	.artist-music {
+    	height: 112px;
+	}
+	.artist-music .artist-img {
+    	height: 79px;
+    	width: 79px;
+	}
+	.artist-music .artist-info {
+    	margin-left: 15px;
+	}
+	.artist-music .artist-name{
+		font-size: 25px;
+	}
+	.artist-music .subtitle{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 1024px){
+	.artist-music .artist-name{
+		font-size: 25px;
+	}
+	.artist-music .subtitle{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 768px){
+	.most-listened-songs .swiper-container {
+    	height: 220px;
+	}
+	.artist-music .artist-img {
+    	height: 69px;
+    	width: 69px;
+	}
+	.artist-music .artist-name {
+    	font-size: 20px;
+	}
+	.artist-music .subtitle {
+    	font-size: 16px;
+	}
+	.artist-music {
+	    height: 100px;
+	}
+}
+
+@media (max-width: 500px){
+	.most-listened-songs .swiper-container {
+    	height: 180px;
+	}
+}
+
+@media (max-width: 370px){
+	.most-listened-songs .swiper-container {
+    	height: 180px;
+	}
+	.artist-music .artist-img {
+    	height: 59px;
+    	width: 59px;
+	}
+	.artist-music {
+	    height: 90px;
+	}
+	.most-listened-songs .swiper-container {
+    	height: 165px;
+	}
+	.most-listened-songs {
+    	padding: 37px 0 28px 0;
+	}
+}

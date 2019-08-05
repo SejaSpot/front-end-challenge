@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Início</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="manifest" href="site.webmanifest"> -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="assets/css/swiper.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="assets/css/header.css">
+		<link rel="stylesheet" href="assets/css/footer.css">
+		<link rel="stylesheet" href="assets/css/banner.css">
+		<link rel="stylesheet" href="assets/css/most-listened-artists.css">
+		<link rel="stylesheet" href="assets/css/most-listened-songs.css">
+		<!-- Tive que invocar esses dois scripts no head pois os elementos dependentes do angular precisam do mesmo pra ser renderizados -->
+		<script src="assets/libs/jquery.min.js"></script>
+		<script src="assets/libs/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+	</head>
+	<body ng-app="myApp" ng-init="logoImg = 'assets/img/logo.png'">
+		<div ng-include="'views/header.html'"></div>
+		<main class="main-index">
+			<section class="banner">
+				<div class="banner-txt animated fadeIn">
+					<h1>Bem vindo ao Spot.fm</h1>
+					<p>Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.</p>
+				</div>
+			</section>
+			<section class="most-listened-artists">
+				<div class="container">
+					<h2 class="section-title">
+					<span>Artistas</span> mais escutados
+					</h2>
+					<ol ng-controller="artistCtrl">
+						<a href="#!artist" ng-repeat="art in topArtists | limitTo: 5" ng-style="{'background-image': 'url({{ art.image[3]['#text'] }})'}">
+							<li>
+								<div class="artist-and-listeners">
+									<h3 class="artist-name">{{ art.name }}</h3>
+									<p class="subtitle"><span>{{ art.listeners }}</span> ouvintes</p>
+								</div>
+							</li>
+						</a>						
+					</ol>
+				</div>
+			</section>
+			<section class="most-listened-songs">
+				<div class="container">
+					<h2 class="section-title">
+					<span>Músicas</span> mais escutadas
+					</h2>
+					<div class="swiper-container" ng-controller="topTracksCtrl">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" ng-repeat="x in topTracks | limitTo: 9">
+								<div class="artist-music">
+									<div class="artist-img" ng-style="{'background-image': 'url({{ x.image[3]['#text'] }})'}"></div>
+									<div class="artist-info">
+										<h3 class="artist-name">{{ x.name }}</h3>
+										<p class="subtitle">{{ x.artist.name }}</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<div ng-include="'views/footer.html'"></div>
+		<script src="assets/libs/swiper.min.js"></script>
+		<script src="assets/js/topartists.controller.js"></script>
+		<script src="assets/js/toptracks.controller.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script>
+			// var app = angular.module("myApp", ["ngRoute"]);
+// app.config(function($routeProvider) {
+//     $routeProvider
+//     .when("/", {
+//         templateUrl : "../index.html"
+//     })
+//     .when("/artist", {
+//         templateUrl : "../views/artist.html"
+//     });
+// });
+		</script>
+	</body>
+</html>

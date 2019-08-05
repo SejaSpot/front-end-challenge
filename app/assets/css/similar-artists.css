@@ -1,0 +1,90 @@
+.similar-artists{
+	margin-top: 125px;
+}
+.similar-artists > .container{
+	display: flex;
+	flex-direction: column;
+}
+.similar-artists .artist-boxes{
+	display: flex;
+	flex-wrap: wrap;
+}
+.similar-artists .artist-boxes .box-artist{
+	width: 208.5px;
+	height: 208.5px;
+	padding: 0 0 15px 15px;
+	color: #fff;
+	display: flex;
+	align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.similar-artists .artist-boxes .box-artist .artist-name{
+	font-size: 18px;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.similar-artists .artist-boxes .box-artist {
+    	width: 12.5%;
+	    height: 183.5px;
+	    padding: 0 0 12px 12px;
+	    color: #fff;
+	    display: flex;
+	    align-items: flex-end;
+	}
+}
+
+@media (max-width: 1366px){
+	.similar-artists .artist-boxes .box-artist {
+    	height: 160px;
+	}
+}
+
+@media (max-width: 1150px){
+	.similar-artists .artist-boxes .box-artist {
+    	height: 140px;
+	}
+}
+
+@media (max-width: 1024px){
+	.similar-artists {
+    	margin-top: 95px;
+	}
+	.similar-artists .artist-boxes .box-artist {
+    	width: 25%;
+    	height: 220px;
+	}
+}
+
+@media (max-width: 768px){
+	.similar-artists .artist-boxes {
+    	height: 350px;
+	}
+	.similar-artists .artist-boxes .box-artist {
+    	height: 50%;
+	}
+}
+
+@media (max-width: 600px){
+	.similar-artists .artist-boxes .box-artist {
+    	width: 50%;
+    	height: 25%;
+	}
+	.similar-artists .artist-boxes {
+    	height: 940px;
+	}
+}
+
+@media (max-width: 500px){
+	.similar-artists .artist-boxes {
+    	height: 870px;
+	}
+}
+
+@media (max-width: 400px){
+	.similar-artists .artist-boxes {
+    	height: 630px;
+	}
+}

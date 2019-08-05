@@ -1,0 +1,153 @@
+*,
+*:before,
+*:after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Fira Sans', sans-serif;
+	color: #2f2f2f;
+	counter-reset: list;
+}
+a{
+	text-decoration: none;
+	transition: text-decoration .3s ease;
+}
+a:hover{
+	text-decoration: underline;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1668px;
+}
+.section-title{
+	text-align: center;
+	font-size: 60px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.section-title span{
+	color: #d51007;
+}
+.artist-name{
+	font-weight: 500;
+	font-size: 30px;
+}
+.subtitle{
+	font-weight: 300;
+	font-size: 24px;
+}
+.reset-btn{
+	cursor: pointer;
+	border: 0;
+	background-color: transparent;
+	outline: none;
+}
+.artist-section-title{
+	font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.ver-mais{
+	align-self: flex-end;
+	color: #1753ac;
+	margin-top: 15px;
+}
+main.main-artists{
+	padding-bottom: 700px;
+}
+
+
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.container {
+	    width: 90%;
+	}
+	.section-title {
+    	font-size: 53px;
+	}
+	main.main-artists {
+    	padding-bottom: 550px;
+	}
+}
+
+@media (max-width: 1366px){
+	.section-title {
+    	font-size: 42px;
+	}
+	.artist-section-title {
+    	font-size: 27px;
+    	margin-bottom: 18px;
+	}
+	main.main-artists {
+    	padding-bottom: 400px;
+	}
+}
+
+@media (max-width: 1024px){
+	.container {
+	    width: 100%;
+	    padding: 0 30px;
+	}
+	.section-title {
+    	font-size: 37px;
+	}
+	.artist-name{
+		font-size: 25px;
+	}
+	.subtitle{
+		font-size: 20px;
+	}
+	main.main-artists {
+    	padding-bottom: 220px;
+	}
+}
+
+@media (max-width: 768px){
+	.section-title {
+    	font-size: 32px;
+	}
+	.artist-name{
+		font-size: 17px;
+	}
+	.subtitle{
+		font-size: 13px;
+	}
+	main.main-artists {
+    	padding-bottom: 160px;
+	}
+	.ver-mais {
+    	margin-top: 12px;
+    	font-size: 15px;
+	}
+}
+
+@media (max-width: 500px){
+	.section-title {
+    	font-size: 25.5px;
+	}
+	.artist-name{
+		font-size: 14px;
+	}
+	.subtitle{
+		font-size: 10px;
+	}
+	.artist-section-title {
+    	font-size: 25px;
+    	margin-bottom: 12px;
+	}
+	.ver-mais {
+    	margin-top: 10px;
+    	font-size: 14px;
+	}
+}
+
+@media (max-width: 370px){
+	.section-title {
+    	font-size: 21.3px;
+	}
+}
