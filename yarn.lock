@@ -335,6 +335,11 @@ body-parser@^1.16.1:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+bootstrap@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
+  integrity sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag==
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1226,11 +1231,6 @@ he@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
-
-html5-boilerplate@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/html5-boilerplate/-/html5-boilerplate-0.0.1.tgz#c1ea4dc3dd883f18fa623df9ccba08d2363716ee"
-  integrity sha1-wepNw92IPxj6Yj35zLoI0jY3Fu4=
 
 http-errors@1.7.2:
   version "1.7.2"
