@@ -26,3 +26,69 @@
 .similar-artists .artist-boxes .box-artist:nth-child(odd){
 	background-color: #8c7f71;
 }
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.similar-artists .artist-boxes .box-artist {
+    	width: 12.5%;
+	    height: 183.5px;
+	    padding: 0 0 12px 12px;
+	    color: #fff;
+	    display: flex;
+	    align-items: flex-end;
+	}
+}
+
+@media (max-width: 1366px){
+	.similar-artists .artist-boxes .box-artist {
+    	height: 160px;
+	}
+}
+
+@media (max-width: 1150px){
+	.similar-artists .artist-boxes .box-artist {
+    	height: 140px;
+	}
+}
+
+@media (max-width: 1024px){
+	.similar-artists {
+    	margin-top: 95px;
+	}
+	.similar-artists .artist-boxes .box-artist {
+    	width: 25%;
+    	height: 220px;
+	}
+}
+
+@media (max-width: 768px){
+	.similar-artists .artist-boxes {
+    	height: 350px;
+	}
+	.similar-artists .artist-boxes .box-artist {
+    	height: 50%;
+	}
+}
+
+@media (max-width: 600px){
+	.similar-artists .artist-boxes .box-artist {
+    	width: 50%;
+    	height: 25%;
+	}
+	.similar-artists .artist-boxes {
+    	height: 940px;
+	}
+}
+
+@media (max-width: 500px){
+	.similar-artists .artist-boxes {
+    	height: 870px;
+	}
+}
+
+@media (max-width: 400px){
+	.similar-artists .artist-boxes {
+    	height: 630px;
+	}
+}

@@ -57,4 +57,50 @@
 }
 .main-songs ol li span{
 	font-size: 18px;
+	text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+/*RESPONSIVE*/
+@media (max-width: 1750px){
+	.main-songs {
+    	width: 48%;
+    	display: flex;
+    	flex-direction: column;
+	}
+}
+@media (max-width: 1024px){
+	.container-songs-albuns {
+    	padding-top: 75px;
+    	flex-direction: column;
+    	align-items: center;
+	}
+	.main-songs {
+    	width: 100%;
+	}
+	.main-songs ol li .play{
+		opacity: 1;
+	}
+}
+
+@media (max-width: 500px){
+	.container-songs-albuns {
+    	padding-top: 50px;
+	}
+	.main-songs ol li .play {
+    	margin: 0 7px 0 35px;
+	}
+	.main-songs ol li .play i {
+    	font-size: 22px;
+	}
+	.main-songs ol li .heart {
+    	margin-right: 12px;
+	}
+	.main-songs ol li span {
+    	font-size: 15px;
+	}
 }

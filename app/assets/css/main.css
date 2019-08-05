@@ -70,11 +70,21 @@ main.main-artists{
 	.section-title {
     	font-size: 53px;
 	}
+	main.main-artists {
+    	padding-bottom: 550px;
+	}
 }
 
 @media (max-width: 1366px){
 	.section-title {
     	font-size: 42px;
+	}
+	.artist-section-title {
+    	font-size: 27px;
+    	margin-bottom: 18px;
+	}
+	main.main-artists {
+    	padding-bottom: 400px;
 	}
 }
 
@@ -92,6 +102,9 @@ main.main-artists{
 	.subtitle{
 		font-size: 20px;
 	}
+	main.main-artists {
+    	padding-bottom: 220px;
+	}
 }
 
 @media (max-width: 768px){
@@ -104,6 +117,13 @@ main.main-artists{
 	.subtitle{
 		font-size: 13px;
 	}
+	main.main-artists {
+    	padding-bottom: 160px;
+	}
+	.ver-mais {
+    	margin-top: 12px;
+    	font-size: 15px;
+	}
 }
 
 @media (max-width: 500px){
@@ -115,6 +135,14 @@ main.main-artists{
 	}
 	.subtitle{
 		font-size: 10px;
+	}
+	.artist-section-title {
+    	font-size: 25px;
+    	margin-bottom: 12px;
+	}
+	.ver-mais {
+    	margin-top: 10px;
+    	font-size: 14px;
 	}
 }
 
