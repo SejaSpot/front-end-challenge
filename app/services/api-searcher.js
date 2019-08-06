@@ -10,7 +10,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
   const urls = {
     topArtists: `${urlBase}chart.gettopartists${urlEnd}`,
     topTracks: `${urlBase}chart.gettoptracks${urlEnd}`,
-    artist: `${urlBase}artist.getinfo${urlEnd}`
+    artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`
   }
 
   /** 
