@@ -3,3 +3,13 @@
 @import "./../../lib/bootstrap/scss/bootstrap.scss"
 
 // incluir outros estilos
+
+header {
+  padding: 1rem 0 1rem 0;
+  #branding {
+    img {
+      max-height: 55px;
+    }
+  }
+}
+
