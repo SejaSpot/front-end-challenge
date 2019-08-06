@@ -18,9 +18,23 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
    * @param {string} 'artist' ou 'album'
    * @return {string} url da imagem
    */
-  getArt = function (name, type="artist") {
+  function getArt (name, type="artist") {
     const query = `${name} ${type} spotify.com`
     return `https://tse2.mm.bing.net/th?q=${query}&w=300&h=300&c=7&rs=1&p=0&dpr=3&pid=1.7&mkt=en-IN&adlt=on`
+  }
+
+  /**
+   * retorna a URL da página de um artista neste aplicativo
+   * usa MBID se o artista o possuir, nome do contrário
+   * @param {object} artist objeto artista
+   * @return {string} url do artista
+   */
+  function getLink (artist) {
+    if (artist.mbid !== "") {
+      return `#!/artist/mbid/${artist.mbid}`
+    } else {
+      return `#!/artist/name/${artist.name}`
+    }
   }
 
   api.getTopArtists = function(){
@@ -28,6 +42,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       const artists = response.data.artists.artist.slice(0,5)
       let artistsWithImages = artists.map(function(artist) {
         artist.image = getArt(artist.name)
+        artist.href = getLink(artist)
         return artist
       })
       api.topArtists = artistsWithImages

@@ -16,6 +16,14 @@ Poderia utilizar a API de um outro serviço para obter estas imagens, mas isso t
 - feita a busca no lastfm, seria necessário fazer uma consulta por artista desejado, aumentando muito a quantidade de solicitações necessárias para exibir as páginas
 - APIs de serviços de músicas usam o MBID para identificar artistas. O Lastfm possui este campo, mas ele nem sempre está preenchido, o que impossibilitaria o utilizar confiavelmente em outros serviços
 
+## URLs dos artistas
+Como citado acima, o Lastfm nem sempre possui o MBID dos artistas, que seria a forma ideal de os identificar unicamente.
+
+Portanto, as páginas dos artistas tem URLs que preferencialmente funcionam usando MBID mas, na falta dele, usam o nome da banda:
+
+- #!/artist/mbid/oMBIDAqui
+- #!/artist/name/oNomeAqui
+
 ## Escolhas Técnicas
 
 - Angular Seed
