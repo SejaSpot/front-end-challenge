@@ -34,7 +34,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
    * @return {string} url do artista
    */
   function getLink (artist) {
-    if (artist.mbid !== "") {
+    if (artist.mbid && artist.mbid !== "") {
       return `#!/artist/mbid/${artist.mbid}`
     } else {
       return `#!/artist/name/${artist.name}`
@@ -42,7 +42,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
   }
 
   api.getArtistTopAlbums = function(artist) {
-    const albumsUrl = artist.mbid ? `${urls.artistTopAlbums}&mbid=${artist.mbid}` : `${urls.artistTopAlbums}&artist=${artist.name}`
+    const albumsUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistTopAlbums}&mbid=${artist.mbid}` : `${urls.artistTopAlbums}&artist=${artist.name}`
 
     const response = $http.get(albumsUrl).then((response) => {
       const albums = response.data.topalbums.album.slice(0,5)
