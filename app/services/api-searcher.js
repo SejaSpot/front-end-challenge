@@ -10,11 +10,11 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
   const apiKey = "0e88f43c5248ff6fd1e662925b8cad52"
   const urlEnd = `&api_key=${apiKey}&format=json`
   const urls = {
-    topArtists: `${urlBase}chart.gettopartists${urlEnd}`,
-    topTracks: `${urlBase}chart.gettoptracks${urlEnd}`,
+    topArtists: `${urlBase}chart.gettopartists${urlEnd}&limit=5`,
+    topTracks: `${urlBase}chart.gettoptracks${urlEnd}&limit=10`,
     artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`,
-    artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}`,
-    artistTopTracks: `${urlBase}artist.gettoptracks${urlEnd}`
+    artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}&limit=5`,
+    artistTopTracks: `${urlBase}artist.gettoptracks${urlEnd}&limit=10`
   }
 
   /** 
