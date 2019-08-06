@@ -1,1 +1,9 @@
 <p>This is the partial for home.</p>
+<ul>
+  <li ng-repeat="item in topArtists">
+    {{item.name}}
+    {{item.listeners}}
+    {{item.mbid}}
+    <img ng-src="{{item.image[3]['#text']}}" alt=""/>
+  </li>
+</ul>
