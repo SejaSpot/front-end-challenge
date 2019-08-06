@@ -55,7 +55,16 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     return response
   }
 
+  api.getArtistTopTracks = function(artist) {
+    const tracksUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistTopTracks}&mbid=${artist.mbid}` : `${urls.artistTopTracks}&artist=${artist.name}`
 
+    const response = $http.get(tracksUrl).then((response) => {
+      const tracks = response.data.toptracks.track.slice(0,10)
+      api.artistTracks = tracks
+    }).catch(e => api.artistTracks = false)
+
+    return response
+  }
 
   api.getTopArtists = function(){
     const response = $http.get(urls['topArtists']).then((response) => {

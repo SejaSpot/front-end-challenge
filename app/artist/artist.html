@@ -8,7 +8,18 @@
   </p>
   <img ng-src="{{artist.image}}" alt="">
 </section>
-<section>
+
+<section id="tracks">
+  <h2>Faixas</h2>
+  <ul>
+    <li ng-repeat="(i, track) in artistTracks">
+      {{i+1}} {{track.name}}
+    </li>
+  </ul>
+</section>
+
+<section id='albums'>
+  <h2>Álbums</h2>
   <ul>
     <li ng-repeat="album in artistAlbums">
       {{album.name}}
