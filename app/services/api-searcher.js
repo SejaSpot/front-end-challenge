@@ -4,7 +4,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     topTracks: null,
     artist: null,
     artistAlbums: null,
-    artistTracks: null
+    artistTracks: null,
+    artistSimilar: null
   }
   const urlBase = "http://ws.audioscrobbler.com/2.0/?method="
   const apiKey = "0e88f43c5248ff6fd1e662925b8cad52"
@@ -14,7 +15,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     topTracks: `${urlBase}chart.gettoptracks${urlEnd}&limit=10`,
     artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`,
     artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}&limit=5`,
-    artistTopTracks: `${urlBase}artist.gettoptracks${urlEnd}&limit=10`
+    artistTopTracks: `${urlBase}artist.gettoptracks${urlEnd}&limit=10`,
+    artistSimilar: `${urlBase}artist.getsimilar${urlEnd}&limit=8`
   }
 
   /** 
@@ -77,6 +79,21 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     return similar
   }
 
+  api.getArtistSimilar = function(artist) {
+    const similarUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistSimilar}&mbid=${artist.mbid}` : `${urls.artistSimilar}&artist=${artist.name}`
+
+    const response = $http.get(similarUrl).then((response) => {
+      const artists = response.data.similarartists.artist.slice(0,8)
+      const artistsWithImages = artists.map((artist) => {
+        artist.image = getArt(artist.name)
+        artist.href= getLink(artist)
+        return artist
+      })
+      api.artistSimilar = artistsWithImages
+    })
+    return response
+  }
+
   api.getTopArtists = function(){
     const response = $http.get(urls['topArtists']).then((response) => {
       const artists = response.data.artists.artist.slice(0,5)
@@ -108,7 +125,6 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     const response = $http.get(artistUrl).then((response) => {
       const artist = response.data.artist
       artist.image = getArt(artist.name)
-      artist.similar = handleArtistSimilar(artist)
       api.artist = artist
     }).catch(e => api.artist = false)
     

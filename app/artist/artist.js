@@ -16,6 +16,8 @@ angular.module('myApp.artist', ['ngRoute'])
       .then(() => $scope.artistAlbums = api.artistAlbums)
     api.getArtistTopTracks($scope.artist)
       .then(() => $scope.artistTracks = api.artistTracks)
+    api.getArtistSimilar($scope.artist)
+      .then(() => $scope.artistSimilar = api.artistSimilar)
   })
   
 }]);
