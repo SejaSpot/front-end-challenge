@@ -2,7 +2,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
   const api = {
     topArtists: null,
     topTracks: null,
-    artist: null
+    artist: null,
+    artistAlbums: null
   }
   const urlBase = "http://ws.audioscrobbler.com/2.0/?method="
   const apiKey = "0e88f43c5248ff6fd1e662925b8cad52"
@@ -10,7 +11,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
   const urls = {
     topArtists: `${urlBase}chart.gettopartists${urlEnd}`,
     topTracks: `${urlBase}chart.gettoptracks${urlEnd}`,
-    artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`
+    artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`,
+    artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}`
   }
 
   /** 
@@ -38,6 +40,22 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       return `#!/artist/name/${artist.name}`
     }
   }
+
+  api.getArtistTopAlbums = function(artist) {
+    const albumsUrl = artist.mbid ? `${urls.artistTopAlbums}&mbid=${artist.mbid}` : `${urls.artistTopAlbums}&artist=${artist.name}`
+
+    const response = $http.get(albumsUrl).then((response) => {
+      const albums = response.data.topalbums.album.slice(0,5)
+      const albumsWithImages = albums.map((album) => {
+        album.image = getArt(`${album.artist.name} ${album.name}`, 'album')
+        return album
+      })
+      api.artistAlbums = albumsWithImages
+    }).catch(e => api.artistAlbums = false)
+    return response
+  }
+
+
 
   api.getTopArtists = function(){
     const response = $http.get(urls['topArtists']).then((response) => {

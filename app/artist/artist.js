@@ -11,6 +11,10 @@ angular.module('myApp.artist', ['ngRoute'])
 
 .controller('ArtistCtrl', ['$scope', '$routeParams', 'APIService', function($scope, $routeParams, api) {
   api.getArtist($routeParams.param, $routeParams.paramType)
-    .then(() => $scope.artist = api.artist)
+    .then(() => {
+      $scope.artist = api.artist
+      api.getArtistTopAlbums($scope.artist).then(
+        () => $scope.artistAlbums = api.artistAlbums )
+    })
   
 }]);

@@ -8,3 +8,12 @@
   </p>
   <img ng-src="{{artist.image}}" alt="">
 </section>
+<section>
+  <ul>
+    <li ng-repeat="album in artistAlbums">
+      {{album.name}}
+      {{album.playcount}}
+      <img ng-src="{{album.image}}" alt="">
+    </li>
+  </ul>
+</section>
