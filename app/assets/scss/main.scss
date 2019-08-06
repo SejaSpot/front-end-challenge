@@ -1,6 +1,6 @@
 // customização de variáveis do Boostrap aqui
 
-@import "./../../lib/bootstrap/scss/bootstrap.scss"
+@import "./../../lib/bootstrap/scss/bootstrap.scss";
 
 // incluir outros estilos
 
@@ -13,3 +13,37 @@ header {
   }
 }
 
+h2 {
+  font-size: 3rem;
+  font-family: "Fira Sans";
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+#banner {
+  height: 420px;
+  background-image: url('./../images/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .text {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    p {
+      padding: 0 20% 0 20%;
+      font-size: 1.2rem;
+    }
+  }
+  
+}

@@ -1,19 +1,30 @@
-<p>This is the partial for home.</p>
-<ul>
-  <li ng-repeat="item in topArtists">
-    {{item.name}}
-    {{item.listeners}}
-    {{item.mbid}}
-    <a ng-href="{{item.href}}">
-      <img ng-src="{{item.image}}" alt=""/>
-    </a>
-  </li>
-</ul>
 
-<ul>
-  <li ng-repeat="item in topTracks">
-    {{item.name}}
-    {{item.artist.name}}
-    <img ng-src="{{item.image}}"/>
-  </li>
-</ul>
+<div class="content">
+  <section id="banner" class="banner row align-items-center">
+    <div class="text col">
+      <h2>Bem vindo ao spot.FM</h2>
+      <p>
+          Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.
+      </p>
+    </div>
+  </section>
+
+  <ul>
+    <li ng-repeat="item in topArtists">
+      {{item.name}}
+      {{item.listeners}}
+      {{item.mbid}}
+      <a ng-href="{{item.href}}">
+        <img ng-src="{{item.image}}" alt=""/>
+      </a>
+    </li>
+  </ul>
+
+  <ul>
+    <li ng-repeat="item in topTracks">
+      {{item.name}}
+      {{item.artist.name}}
+      <img ng-src="{{item.image}}"/>
+    </li>
+  </ul>
+</div>
