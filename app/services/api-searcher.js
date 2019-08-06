@@ -3,7 +3,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     topArtists: null,
     topTracks: null,
     artist: null,
-    artistAlbums: null
+    artistAlbums: null,
+    artistTracks: null
   }
   const urlBase = "http://ws.audioscrobbler.com/2.0/?method="
   const apiKey = "0e88f43c5248ff6fd1e662925b8cad52"
@@ -12,7 +13,8 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     topArtists: `${urlBase}chart.gettopartists${urlEnd}`,
     topTracks: `${urlBase}chart.gettoptracks${urlEnd}`,
     artist: `${urlBase}artist.getinfo${urlEnd}&lang=PT`,
-    artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}`
+    artistTopAlbums: `${urlBase}artist.gettopalbums${urlEnd}`,
+    artistTopTracks: `${urlBase}artist.gettoptracks${urlEnd}`
   }
 
   /** 
@@ -57,13 +59,22 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
 
   api.getArtistTopTracks = function(artist) {
     const tracksUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistTopTracks}&mbid=${artist.mbid}` : `${urls.artistTopTracks}&artist=${artist.name}`
-
+    
     const response = $http.get(tracksUrl).then((response) => {
       const tracks = response.data.toptracks.track.slice(0,10)
       api.artistTracks = tracks
     }).catch(e => api.artistTracks = false)
 
     return response
+  }
+
+  handleArtistSimilar = function(artist) {
+    const similar = artist.similar.artist.map((item) => {
+      item.image = getArt(item.name)
+      item.href = getLink(item)
+      return item
+    })
+    return similar
   }
 
   api.getTopArtists = function(){
@@ -97,6 +108,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     const response = $http.get(artistUrl).then((response) => {
       const artist = response.data.artist
       artist.image = getArt(artist.name)
+      artist.similar = handleArtistSimilar(artist)
       api.artist = artist
     }).catch(e => api.artist = false)
     

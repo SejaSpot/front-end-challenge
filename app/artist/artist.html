@@ -1,4 +1,4 @@
-<section>
+<section id="info">
   <h1>{{artist.name}}</h1>
   <div>
       {{artist.stats.listeners}}
@@ -25,6 +25,18 @@
       {{album.name}}
       {{album.playcount}}
       <img ng-src="{{album.image}}" alt="">
+    </li>
+  </ul>
+</section>
+
+<section id="similar">
+  <h2>Sugeridos</h2>
+  <ul>
+    <li ng-repeat="artist in artist.similar">
+      {{artist.name}}
+      <a ng-href="{{artist.href}}">
+        <img ng-src="{{artist.image}}" alt="">
+      </a>
     </li>
   </ul>
 </section>
