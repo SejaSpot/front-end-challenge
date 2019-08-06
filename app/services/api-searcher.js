@@ -48,7 +48,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
         return artist
       })
       api.topArtists = artistsWithImages
-    })
+    }).catch(e => api.topArtists = false)
     return response
   }
 
@@ -60,7 +60,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
         return item
       })
       api.topTracks = tracksWithImages
-    })
+    }).catch(e => api.topTracks = false)
     return response
   }
 
@@ -71,7 +71,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       const artist = response.data.artist
       artist.image = getArt(artist.name)
       api.artist = artist
-    })
+    }).catch(e => api.artist = false)
     
     return response
   }
