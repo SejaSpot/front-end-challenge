@@ -1,21 +1,23 @@
 angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function($http) {
   const api = {
-    topArtists: false,
-    topTracks: false
+    topArtists: null,
+    topTracks: null,
+    artist: null
   }
   const urlBase = "http://ws.audioscrobbler.com/2.0/?method="
   const apiKey = "0e88f43c5248ff6fd1e662925b8cad52"
   const urlEnd = `&api_key=${apiKey}&format=json`
   const urls = {
     topArtists: `${urlBase}chart.gettopartists${urlEnd}`,
-    topTracks: `${urlBase}chart.gettoptracks${urlEnd}` 
+    topTracks: `${urlBase}chart.gettoptracks${urlEnd}`,
+    artist: `${urlBase}artist.getinfo${urlEnd}`
   }
 
   /** 
    * retorna uma imagem buscada no spotify
    * através de um script de busca do bing
    * @param {string} artistName nome do artista/álbum
-   * @param {string} 'artist' ou 'album'
+   * @param {string} type 'artist' ou 'album'
    * @return {string} url da imagem
    */
   function getArt (name, type="artist") {
@@ -59,6 +61,18 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       })
       api.topTracks = tracksWithImages
     })
+    return response
+  }
+
+  api.getArtist = function(param, paramType="mbid") {
+    const artistUrl = paramType === "mbid" ? `${urls.artist}&mbid=${param}` : `${urls.artist}&artist=${param}`
+   
+    const response = $http.get(artistUrl).then((response) => {
+      const artist = response.data.artist
+      artist.image = getArt(artist.name)
+      api.artist = artist
+    })
+    
     return response
   }
 

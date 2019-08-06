@@ -1,5 +1,10 @@
-<p>This is the partial for artist page.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<section>
+  <h1>{{artist.name}}</h1>
+  <div>
+      {{artist.stats.listeners}}
+  </div>
+  <p>
+    {{artist.bio.summary}}
+  </p>
+  <img ng-src="{{artist.image}}" alt="">
+</section>
