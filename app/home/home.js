@@ -9,10 +9,9 @@ angular.module('myApp.home', ['ngRoute', 'myApp.apiSearcher'])
   });
 }])
 
-.controller('HomeCtrl', ['$scope', 'APIService', function($scope, APIService) {
-  $scope.topArtists = false
-  const topArtists = APIService.getTopArtists().then((response) => {
-    $scope.topArtists = response.data.artists.artist.slice(0,5)
-
+.controller('HomeCtrl', ['$scope', 'APIService', function($scope, api) {
+  api.getTopArtists().then(() => {
+    $scope.topArtists = api.topArtists
   })
+  
 }]);
