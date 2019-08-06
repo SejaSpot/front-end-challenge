@@ -7,3 +7,11 @@
     <img ng-src="{{item.image}}" alt=""/>
   </li>
 </ul>
+
+<ul>
+  <li ng-repeat="item in topTracks">
+    {{item.name}}
+    {{item.artist.name}}
+    <img ng-src="{{item.image}}"/>
+  </li>
+</ul>

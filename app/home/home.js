@@ -13,5 +13,8 @@ angular.module('myApp.home', ['ngRoute', 'myApp.apiSearcher'])
   api.getTopArtists().then(() => {
     $scope.topArtists = api.topArtists
   })
-  
+
+  api.getTopTracks().then(() => {
+    $scope.topTracks = api.topTracks
+  })
 }]);
