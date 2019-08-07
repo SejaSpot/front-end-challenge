@@ -86,3 +86,27 @@ h2 {
     }
   }
 }
+
+#top-tracks {
+  background-color: #080809;
+  h2 {
+    color: white;
+  }
+
+  .track {
+    .inner{
+      border-bottom: white 2px solid;
+      border-top: white 2px solid;        
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+    }
+
+    color: white;
+
+    img {
+      width: 80px;
+      margin-right: .8rem;
+    }
+  }
+}
+

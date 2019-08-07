@@ -1,15 +1,15 @@
 
-<div class="content">
+<div class="page" id="home">
   <section id="banner" class="banner row align-items-center">
     <div class="text col">
-      <h2 class="white">Bem vindo ao spot.FM</h2>
+      <h1 class="white">Bem vindo ao spot.FM</h1>
       <p>
           Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.
       </p>
     </div>
   </section>
 
-  <section id="top-artists" class="container">
+  <section id="top-artists" class="container content">
     <h2 class="with-red"><span>Artistas</span> Mais Escutados</h2>
     <div class="row first">
       <div class="artist col-12 {{i >= 2 ? 'col-md-4' : 'col-md-6'}}" ng-repeat="(i, item) in topArtists">
@@ -22,25 +22,23 @@
         </a>
       </div>
     </div>
-
   </section>
-
-  <ul>
-    <li ng-repeat="item in topArtists">
-      {{item.name}}
-      {{item.listeners}}
-      {{item.mbid}}
-      <a ng-href="{{item.href}}">
-        <img ng-src="{{item.image}}" alt=""/>
-      </a>
-    </li>
-  </ul>
-
-  <ul>
-    <li ng-repeat="item in topTracks">
-      {{item.name}}
-      {{item.artist.name}}
-      <img ng-src="{{item.image}}"/>
-    </li>
-  </ul>
+  <section id="top-tracks" class="content">
+    <h2 class="with-red"><span>Músicas</span> mais escutadas</h2>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="track col-12 col-md-4" ng-repeat="(i, item) in topTracks[0]">
+          <div class="d-flex inner">
+            <div class="float-left">
+              <img ng-src="{{item.image}}" class="rounded-circle" alt="">
+            </div>
+            <div class="justify-content-center align-self-center">
+              <h4>{{item.name}}</h4>
+              <div class="artist">{{item.artist.name}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
