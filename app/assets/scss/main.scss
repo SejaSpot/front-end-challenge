@@ -1,5 +1,15 @@
 // customização de variáveis do Boostrap aqui
 
+$dark-bg: #080809;
+$red: #d51007;
+$note: #2f2f2f;
+$shaded: rgba(0,0,0, 0.4);
+
+$theme-colors: (
+  "primary": #d51007,
+  "secondary": #2f2f2f
+);
+
 @import "./../../lib/bootstrap/scss/bootstrap.scss";
 
 // incluir outros estilos
