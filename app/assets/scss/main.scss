@@ -18,7 +18,18 @@ h2 {
   font-family: "Fira Sans";
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: black;
+
+  &.with-red {
+    margin: 2rem;
+    span {
+      color: red;
+    }
+  }
+
+  &.white {
+    color: white;
+  }
 }
 
 #banner {
@@ -46,4 +57,32 @@ h2 {
     }
   }
   
+}
+
+#top-artists {
+
+  .artist {
+    overflow: hidden;
+    padding: 0 0 0 0;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      color: white;
+      &:hover {
+        color: darken(white, 20%);
+      }
+    }
+
+    .text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      padding: 1rem;
+    }
+  }
 }

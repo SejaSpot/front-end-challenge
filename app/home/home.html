@@ -2,11 +2,27 @@
 <div class="content">
   <section id="banner" class="banner row align-items-center">
     <div class="text col">
-      <h2>Bem vindo ao spot.FM</h2>
+      <h2 class="white">Bem vindo ao spot.FM</h2>
       <p>
           Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.
       </p>
     </div>
+  </section>
+
+  <section id="top-artists" class="container">
+    <h2 class="with-red"><span>Artistas</span> Mais Escutados</h2>
+    <div class="row first">
+      <div class="artist col-12 {{i >= 2 ? 'col-md-4' : 'col-md-6'}}" ng-repeat="(i, item) in topArtists">
+        <a ng-href="{{item.href}}">
+          <img ng-src="{{item.image}}" alt="">
+          <div class="text">
+            <h4>{{item.name}}</h4>
+            <div class="listeners">{{item.listeners}} ouvintes</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <ul>

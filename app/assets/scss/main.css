@@ -10574,6 +10574,18 @@ h2 {
   font-family: "Fira Sans";
   text-align: center;
   text-transform: uppercase;
+  color: black;
+}
+
+h2.with-red {
+  margin: 2rem;
+}
+
+h2.with-red span {
+  color: red;
+}
+
+h2.white {
   color: white;
 }
 
@@ -10604,5 +10616,31 @@ h2 {
 #banner .text p {
   padding: 0 20% 0 20%;
   font-size: 1.2rem;
+}
+
+#top-artists .artist {
+  overflow: hidden;
+  padding: 0 0 0 0;
+  position: relative;
+}
+
+#top-artists .artist img {
+  width: 100%;
+}
+
+#top-artists .artist a {
+  color: white;
+}
+
+#top-artists .artist a:hover {
+  color: #cccccc;
+}
+
+#top-artists .artist .text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
