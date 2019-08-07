@@ -45,6 +45,17 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     }
   }
 
+  /**
+   * retorna um número formatado com pontos
+   * a cada três casas decimais
+   * @param {integer} num um número
+   * @return {string} uma string do número formatado
+   */
+  function decimalDots(num) {
+    return num.toString()
+      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  }
+
   api.getArtistTopAlbums = function(artist) {
     const albumsUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistTopAlbums}&mbid=${artist.mbid}` : `${urls.artistTopAlbums}&artist=${artist.name}`
 
@@ -52,6 +63,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       const albums = response.data.topalbums.album.slice(0,5)
       const albumsWithImages = albums.map((album) => {
         album.image = getArt(`${album.artist.name} ${album.name}`, 'album')
+        album.playcount = decimalDots(album.playcount)
         return album
       })
       api.artistAlbums = albumsWithImages
@@ -100,6 +112,7 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
       let artistsWithImages = artists.map(function(artist) {
         artist.image = getArt(artist.name)
         artist.href = getLink(artist)
+        artist.listeners = decimalDots(artist.listeners)
         return artist
       })
       api.topArtists = artistsWithImages
