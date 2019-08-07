@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and core components
 angular.module('myApp', [
   'ngRoute',
+  'ngSanitize',
   'myApp.apiSearcher',
   'myApp.home',
   'myApp.artist',
