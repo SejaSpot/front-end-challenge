@@ -10703,6 +10703,11 @@ section.content {
   margin: 1rem;
 }
 
+#artist.page #info p {
+  font-family: "Fira Sans Light";
+  font-size: 19px;
+}
+
 #artist.page #info img {
   width: 120px;
   border: 2px #d51007 solid;

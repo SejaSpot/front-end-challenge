@@ -151,10 +151,17 @@ section {
     h1 {
       margin: 1rem;
     }
+    
+    p {
+      font-family: "Fira Sans Light";
+      font-size: 19px;
+    }
     img {
       width: 120px;
       border: 2px $red solid;
     }
+
+
   }
 
   #tracks {
