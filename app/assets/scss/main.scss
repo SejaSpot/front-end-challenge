@@ -25,6 +25,19 @@ header {
       padding-bottom: 0;
   }
 }
+}
+
+footer {
+  #copyright {
+    color: $note;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .logo img{
+    max-height: 45px;
+    margin: 2rem 0 2rem 0;
+  }
+}
 
 h2 {
   font-size: 3rem;
