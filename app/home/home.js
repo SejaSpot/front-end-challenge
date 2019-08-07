@@ -15,6 +15,12 @@ angular.module('myApp.home', ['ngRoute', 'myApp.apiSearcher'])
   })
 
   api.getTopTracks().then(() => {
-    $scope.topTracks = api.topTracks
+    window.test = api.topTracks
+    $scope.topTracks = [
+      [api.topTracks[0], api.topTracks[1], api.topTracks[2]],
+      [api.topTracks[3], api.topTracks[4], api.topTracks[5]],
+      [api.topTracks[6], api.topTracks[7], api.topTracks[8]]
+    ]
+    console.log($scope.topTracks)
   })
 }]);
