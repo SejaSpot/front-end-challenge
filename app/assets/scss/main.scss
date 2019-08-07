@@ -20,6 +20,9 @@ header {
     img {
       max-height: 55px;
     }
+    padding-bottom: .5rem;
+    @media (min-width: 768px) {
+      padding-bottom: 0;
   }
 }
 
