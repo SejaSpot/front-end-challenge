@@ -74,4 +74,5 @@ Estes problemas deixam o código mais complexo e frágil, e possivelmente existe
 - Exibir algo caso algum dos dados falhe em carregar
 - Unificar métodos de chamadas da API
 - Criar classes para tipos de dados recorrentes (eg. artistas), com propriedades e funções apropriadas
-- Testes
+- remover mais partes não usadas do angular-seed
+- testes
