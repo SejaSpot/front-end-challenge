@@ -82,15 +82,6 @@ angular.module('myApp.apiSearcher', ['ngRoute']).factory("APIService", function(
     return response
   }
 
-  handleArtistSimilar = function(artist) {
-    const similar = artist.similar.artist.map((item) => {
-      item.image = getArt(item.name)
-      item.href = getLink(item)
-      return item
-    })
-    return similar
-  }
-
   api.getArtistSimilar = function(artist) {
     const similarUrl = artist.mbid && artist.mbid !== "" ? `${urls.artistSimilar}&mbid=${artist.mbid}` : `${urls.artistSimilar}&artist=${artist.name}`
 
