@@ -1,0 +1,264 @@
+// customização de variáveis do Boostrap aqui
+
+$dark-bg: #080809;
+$red: #d51007;
+$note: #2f2f2f;
+$shaded: rgba(0,0,0, 0.4);
+$shadow-gradient: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
+
+
+$theme-colors: (
+  "primary": #d51007,
+  "secondary": #2f2f2f
+);
+
+$md: 768px;
+
+@import "./../../lib/bootstrap/scss/bootstrap.scss";
+
+// incluir outros estilos
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+  padding: 1rem 0 1rem 0;
+  #branding {
+    img {
+      max-height: 55px;
+    }
+    padding-bottom: .5rem;
+    @media (min-width: $md) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+footer {
+  #copyright {
+    color: $note;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .logo img{
+    max-height: 45px;
+    margin: 2rem 0 2rem 0;
+  }
+}
+
+h1, h2 {
+  font-size: 3rem;
+  font-family: "Fira Sans";
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+
+  &.with-red {
+    padding: 2rem;
+    span {
+      color: $red;
+    }
+  }
+
+  &.white {
+    color: white;
+  }
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+section {
+  &.content {
+    padding-bottom: 2rem;
+  }
+}
+
+#banner {
+  height: 420px;
+  background-image: url('./../images/banner.png');
+  background-size: cover;
+  background-repeat: no-repeat no-repeat;
+  position: relative;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .text {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    p {
+      padding: 0 20% 0 20%;
+      font-size: 1.2rem;
+    }
+  }
+  
+}
+
+#top-artists {
+
+  .artist {
+    overflow: hidden;
+    padding: 0 0 0 0;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      color: white;
+      &:hover {
+        color: darken(white, 20%);
+      }
+    }
+
+    .text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      padding: 1rem;
+    }
+  }
+}
+
+#top-tracks {
+  background-color: #080809;
+  h2 {
+    color: white;
+  }
+
+  .track {
+    .inner{
+      border-bottom: white 2px solid;
+      border-top: white 2px solid;        
+      padding-top: .4rem;
+      padding-bottom: .4rem;
+    }
+
+    color: white;
+
+    img {
+      width: 80px;
+      margin-right: .8rem;
+    }
+  }
+}
+
+#artist.page {
+  #info {
+    padding: 2rem 0 2rem 0;
+    background-color: $dark-bg;
+    color: white;
+
+    h1 {
+      margin: 1rem;
+    }
+    
+    p {
+      font-family: "Fira Sans Light";
+      font-size: 19px;
+    }
+    img {
+      width: 120px;
+      border: 2px $red solid;
+    }
+
+
+  }
+
+  .container.content {
+    padding: 6rem 0 6rem 0;
+  }
+  section#tracks {
+    .list-group-item {
+      padding: 0.4rem 0.4rem;
+      border: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+      margin-bottom: 0;
+
+      &.grey-background {
+        background-color: #f9f9f9;
+      }
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  section#albums {
+
+    padding-top: 6rem;
+    @media (min-width: $md) {
+      padding-top: 0;
+    }
+
+    .album {
+      overflow: hidden;
+      padding: 0 0;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        z-index: 1;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: $shadow-gradient;
+      }
+    }
+  }
+
+  section#similar {
+    padding-top: 6rem;
+    .artist {
+      overflow: hidden;
+      padding: 0 0;
+      position: relative;
+
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: $shadow-gradient;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h5 {
+        padding: 0.5rem;
+        position: absolute;
+        bottom: 0; left: 0;
+        width: 100%;
+        font-size: 1rem;
+        color: white;
+        z-index: 1;
+      }
+    }
+  }
+}

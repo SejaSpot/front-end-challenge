@@ -1,0 +1,43 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A starter project for AngularJS",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.7.5",
+    "angular-loader": "^1.7.5",
+    "angular-route": "^1.7.5",
+    "angular-sanitize": "^1.7.8",
+    "bootstrap": "^4.3.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.7.5",
+    "cpx": "^1.5.0",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^1.1.2",
+    "protractor": "^5.4.1"
+  },
+  "scripts": {
+    "postinstall": "yarn run copy-libs",
+    "update-deps": "yarn update",
+    "postupdate-deps": "yarn run copy-libs",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/scss,bootstrap/dist/js}/**/*\" app/lib -C",
+    "prestart": "yarn install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "pretest": "yarn install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "yarn test -- --single-run",
+    "preupdate-webdriver": "yarn install",
+    "//": "Do not install the Firefox driver to work around https://github.com/angular/webdriver-manager/issues/303.",
+    "update-webdriver": "webdriver-manager update --gecko false",
+    "preprotractor": "yarn run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js",
+    "update-index-async": "node --eval \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/lib/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=lib/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  }
+}
