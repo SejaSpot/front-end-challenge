@@ -1,42 +1,40 @@
-<section id="info">
-  <h1>{{artist.name}}</h1>
-  <div>
-      {{artist.stats.listeners}}
-  </div>
-  <p>
-    {{artist.bio.summary}}
-  </p>
-  <img ng-src="{{artist.image}}" alt="">
-</section>
+<div class="page" id="artist">
+  <section id="info">
+    <div class="container text-center">
+      <img id="avatar" class="rounded-circle" ng-src="{{artist.image}}" alt="">
+      <h1 class="white">{{artist.name}}</h1>
+      <p ng-bind-html="artist.bio.summary"></p>
+    </div>
+  </section>
+  <section id="tracks">
+    <h2>Faixas</h2>
+    <ul>
+      <li ng-repeat="(i, track) in artistTracks">
+        {{i+1}} {{track.name}}
+      </li>
+    </ul>
+  </section>
+  <section id='albums'>
+    <h2>Álbums</h2>
+    <ul>
+      <li ng-repeat="album in artistAlbums">
+        {{album.name}}
+        {{album.playcount}}
+        <img ng-src="{{album.image}}" alt="">
+      </li>
+    </ul>
+  </section>
 
-<section id="tracks">
-  <h2>Faixas</h2>
-  <ul>
-    <li ng-repeat="(i, track) in artistTracks">
-      {{i+1}} {{track.name}}
-    </li>
-  </ul>
-</section>
+  <section id="similar">
+    <h2>Sugeridos</h2>
+    <ul>
+      <li ng-repeat="artist in artistSimilar">
+        {{artist.name}}
+        <a ng-href="{{artist.href}}">
+          <img ng-src="{{artist.image}}" alt="">
+        </a>
+      </li>
+    </ul>
+  </section>
 
-<section id='albums'>
-  <h2>Álbums</h2>
-  <ul>
-    <li ng-repeat="album in artistAlbums">
-      {{album.name}}
-      {{album.playcount}}
-      <img ng-src="{{album.image}}" alt="">
-    </li>
-  </ul>
-</section>
-
-<section id="similar">
-  <h2>Sugeridos</h2>
-  <ul>
-    <li ng-repeat="artist in artistSimilar">
-      {{artist.name}}
-      <a ng-href="{{artist.href}}">
-        <img ng-src="{{artist.image}}" alt="">
-      </a>
-    </li>
-  </ul>
-</section>
+</div>

@@ -23,8 +23,8 @@ header {
     padding-bottom: .5rem;
     @media (min-width: 768px) {
       padding-bottom: 0;
+    }
   }
-}
 }
 
 footer {
@@ -39,7 +39,7 @@ footer {
   }
 }
 
-h2 {
+h1, h2 {
   font-size: 3rem;
   font-family: "Fira Sans";
   text-align: center;
@@ -47,14 +47,20 @@ h2 {
   color: black;
 
   &.with-red {
-    margin: 2rem;
+    padding: 2rem;
     span {
-      color: red;
+      color: $red;
     }
   }
 
   &.white {
     color: white;
+  }
+}
+
+section {
+  &.content {
+    padding-bottom: 2rem;
   }
 }
 
@@ -136,3 +142,22 @@ h2 {
   }
 }
 
+#artist.page {
+  #info {
+    padding: 2rem 0 2rem 0;
+    background-color: $dark-bg;
+    color: white;
+
+    h1 {
+      margin: 1rem;
+    }
+    img {
+      width: 120px;
+      border: 2px $red solid;
+    }
+  }
+
+  #tracks {
+
+  }
+}
