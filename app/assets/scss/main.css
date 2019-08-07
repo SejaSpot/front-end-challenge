@@ -10561,6 +10561,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 header {
   padding: 1rem 0 1rem 0;
 }
@@ -10608,6 +10612,10 @@ h1.with-red span, h2.with-red span {
 
 h1.white, h2.white {
   color: white;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 section.content {
@@ -10711,5 +10719,101 @@ section.content {
 #artist.page #info img {
   width: 120px;
   border: 2px #d51007 solid;
+}
+
+#artist.page .container.content {
+  padding: 6rem 0 6rem 0;
+}
+
+#artist.page section#tracks .list-group-item {
+  padding: 0.4rem 0.4rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 0;
+}
+
+#artist.page section#tracks .list-group-item.grey-background {
+  background-color: #f9f9f9;
+}
+
+#artist.page section#tracks .list-group-item span {
+  margin-right: 1rem;
+}
+
+#artist.page section#albums {
+  padding-top: 6rem;
+}
+
+@media (min-width: 768px) {
+  #artist.page section#albums {
+    padding-top: 0;
+  }
+}
+
+#artist.page section#albums .album {
+  overflow: hidden;
+  padding: 0 0;
+  position: relative;
+}
+
+#artist.page section#albums .album img {
+  width: 100%;
+}
+
+#artist.page section#albums .album .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  z-index: 1;
+}
+
+#artist.page section#albums .album::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+
+#artist.page section#similar {
+  padding-top: 6rem;
+}
+
+#artist.page section#similar .artist {
+  overflow: hidden;
+  padding: 0 0;
+  position: relative;
+}
+
+#artist.page section#similar .artist::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+
+#artist.page section#similar .artist img {
+  width: 100%;
+}
+
+#artist.page section#similar .artist h5 {
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+  z-index: 1;
 }
 /*# sourceMappingURL=main.css.map */

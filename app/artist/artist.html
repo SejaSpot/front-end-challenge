@@ -6,35 +6,54 @@
       <p ng-bind-html="artist.bio.summary"></p>
     </div>
   </section>
-  <section id="tracks">
-    <h2>Faixas</h2>
-    <ul>
-      <li ng-repeat="(i, track) in artistTracks">
-        {{i+1}} {{track.name}}
-      </li>
-    </ul>
-  </section>
-  <section id='albums'>
-    <h2>Álbums</h2>
-    <ul>
-      <li ng-repeat="album in artistAlbums">
-        {{album.name}}
-        {{album.playcount}}
-        <img ng-src="{{album.image}}" alt="">
-      </li>
-    </ul>
-  </section>
+  <div class="container content">
+    <div class="row">
+      <div class="col-12 col-md-4">
+          <section id="tracks">
+            <h3>Faixas principais</h3>
+            <ul class="list-group">
+              <li class="list-group-item {{i % 2 !== 0 ? 'grey-background' : ''}}" ng-repeat="(i, track) in artistTracks">
+                <span>{{i+1}}</span> {{track.name}}
+              </li>
+            </ul>
+          </section>
+      </div>
+      <div class="col-12 col-md-8">
+        <section id="albums">
+          <h3>Álbuns principais</h3>
+          <div class="row">
+            <div class="album col-12 col-md-6">
+              <img ng-src="{{artistAlbums[0].image}}" alt="">
+              <div class="text">
+                <h4>{{artistAlbums[0].name}}</h4>
+                <div class="count">{{artistAlbums[0].playcount}} ouvintes</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="row">
+                <div class="album col-6" ng-repeat="item in artistAlbums.slice(1)">
+                  <img ng-src="{{item.image}}" alt="">
+                  <div class="text">
+                    <h4>{{item.name}}</h4>
+                    <div class="count">{{item.playcount}} ouvintes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
 
-  <section id="similar">
-    <h2>Sugeridos</h2>
-    <ul>
-      <li ng-repeat="artist in artistSimilar">
-        {{artist.name}}
-        <a ng-href="{{artist.href}}">
+    <section id="similar">
+      <h3>Artistas parecidos</h3>
+      <div class="row">
+        <a class="artist col-6 col-md" ng-repeat="artist in artistSimilar" ng-href="{{artist.href}}">
           <img ng-src="{{artist.image}}" alt="">
+          <h5>{{artist.name}}</h5>
         </a>
-      </li>
-    </ul>
-  </section>
+      </div>
+    </section>
 
+  </div>
 </div>
