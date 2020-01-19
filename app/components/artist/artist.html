@@ -1,0 +1,96 @@
+<div class="hero hero--artist">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="hero__thumbnail"><img src="{{vm.artist.image[3]['#text']}}"></div>
+                <h1 class="hero__title">{{vm.artist.name}}</h1>
+                <p class="hero__description" ng-bind-html="vm.artist.bio.summary | unsafe"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top-albums">
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-12 col-md-5">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h3 class="subtitle-default">Faixas Principais</h3>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <table class="top-albums__table">
+                            <tr ng-repeat="data in vm.topTracks">
+                              <td class="top-albums__index">{{$index + 1}}</td>
+                              <td class="top-albums__track">{{data.name}}</td>
+                            </tr>
+                          </table>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-sm-12 col-md-7">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="subtitle-default">Álbuns Principais</h3>
+                </div>
+            </div>
+
+            <div class="row no-gutters">
+                <div class="col-sm-6">
+                    <a class="artist-list__artist-link" href="{{vm.topAlbums[0].url}}" target="_blank">
+                        <div class="artist artist--top-album" ng-style="{
+                            'background-image': 'url('+vm.topAlbums[0].image[2]['#text']+')'}">
+                            <div class="artist__description artist__description--top5">
+                                <div class="artist__description__name artist__description__name--similars">{{vm.topAlbums[0].name}}</div>
+                                <div class="artist__description__count">{{vm.topAlbums[0].playcount | number}} ouvintes</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row no-gutters">
+                        <div class="col-xs-6 col-sm-6" ng-repeat="album in vm.topAlbums" ng-show="$index > 0">
+                            <a class="artist-list__artist-link" href="{{album.url}}" target="_blank">
+                                <div class="artist artist--top-albums" ng-style="{
+                                    'background-image': 'url('+album.image[2]['#text']+')'}">
+                                    <div class="artist__description artist__description--top5">
+                                        <div class="artist__description__name artist__description__name--similars">{{album.name}}</div>
+                                        <div class="artist__description__count">{{album.playcount | number}} ouvintes</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="similars artist-list">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="subtitle-default">Artistas Similares</h3>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-xs-6 col-sm-15 col-md-15" ng-repeat="similar in vm.similars">
+                <a class="artist-list__artist-link" href="{{similar.url}}" target="_blank">
+                    <div class="artist artist--similars" ng-style="{
+                        'background-image': 'url('+similar.image[2]['#text']+')'}">
+                        <div class="artist__description">
+                            <div class="artist__description__name artist__description__name--similars">{{similar.name}}</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

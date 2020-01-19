@@ -1,0 +1,46 @@
+@mixin fontLight() {
+    font-family: 'fira_sanslight';
+}
+
+@mixin fontMedium() {
+    font-family: 'fira_sansmedium';
+}
+
+@mixin mainH1($color) {
+    @include fontMedium();
+    font-size:5rem;
+    color: $color;
+} 
+
+@mixin mainText() {
+    @include fontLight();
+    font-size: 2.7rem;
+    color:white;
+} 
+
+@mixin placeholder() {
+    font-family: 'fira_sansmedium';
+    color: #d51007;
+}
+
+@mixin sectionGutter() {
+    padding : 68px 0;
+
+    @media(max-width: 991px) {
+        padding : 38px 0 20px;
+    }
+}
+
+.container{
+    max-width: 1697px;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+ }
+ .row.no-gutters > [class^="col-"],
+ .row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+ }

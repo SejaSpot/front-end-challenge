@@ -1,0 +1,113 @@
+.artist-list {
+    @media(min-width: 991px) {
+        &__artist-link:hover .artist__description__name,
+        &__artist-link:hover .artist__description__count {
+            padding-left:10px;
+        }
+
+        &__artist-link:hover .artist {
+           opacity: 0.9;
+        }
+    }
+}
+
+.artist {
+    
+    position: relative;
+
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+    &__description__name,
+    &__description__count {
+        padding-left: 0;
+        transition:padding-left 0.3s ease-in;
+        -webkit-transition:padding-left 0.3s ease-in;
+        -moz-transition:padding-left 0.3s ease-in;
+    }
+
+    &__description--top5 {
+        background: #090909a8;
+    }
+
+    &__description {
+
+        transition:background 0.2s ease-in;
+        -webkit-transition:background 0.2s ease-in;
+        -moz-transition:background 0.2s ease-in;
+
+        position: absolute;
+        bottom:0;
+        width:100%;
+        color: white;
+        padding: 10px 17px;
+
+        &__name--top5 {
+            font-size: 2.3rem;
+            @include fontMedium();
+        }
+
+        &__name--similars {
+            font-size: 1.6rem;
+            @include fontMedium();
+        }
+
+        &__count {
+            font-size: 1.5rem;
+            @include fontLight();
+        }
+
+    }
+
+    @media (max-width: 991px) {
+        margin-bottom: 0;
+
+        &--top5 {    
+            height: 382px;
+            margin-bottom: 30px;
+        }
+
+        &--similars {
+            height: 140px;
+        }
+
+        &--top-album {
+            height: 360px;
+        }
+    
+        &--top-albums {
+            height: 180px;
+        }
+
+    }
+
+    @media (min-width: 992px) {
+        &--top5 {
+            height:350px;
+        }
+    
+        &--similars {
+            height: 204px;
+        }
+    
+        &--top-album {
+            height: 326px;
+        }
+    
+        &--top-albums {
+            height: 163px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        height: 240px;
+
+        &--top5 {    
+            margin-bottom: 0px;
+        }
+
+        &--top-album {
+            height: 326px;
+        }
+    }
+}

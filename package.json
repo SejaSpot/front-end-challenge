@@ -1,0 +1,49 @@
+{
+  "name": "front-end-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack -p",
+    "start": "./node_modules/.bin/webpack-dev-server --content-base app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oliveirajunior90/front-end-challenge.git"
+  },
+  "author": "Almir Júnior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oliveirajunior90/front-end-challenge/issues"
+  },
+  "homepage": "https://github.com/oliveirajunior90/front-end-challenge#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "bootstrap": "^4.1.1",
+    "bootstrap-loader": "^3.0.0",
+    "bootstrap-sass": "^3.3.7",
+    "file-loader": "^1.1.11",
+    "jquery": "^3.3.1",
+    "loader": "^2.1.1",
+    "sass-resources-loader": "^1.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
+    "imports-loader": "^0.8.0",
+    "node-sass": "^4.9.0",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

@@ -1,0 +1,26 @@
+<header class="topbar">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="topbar__logo">
+                    <a href="/#!"><img src="assets/img/logotipo.png" alt="spot.fm"></a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="topbar__form">
+                    <form action="">
+                        <label for="input"></label>
+                        <input type="text" ng-model="name" placeholder="BUSCAR POR UM ARTISTA" ng-keypress='vm.searchArtist(name)' />
+                    </form>
+
+                    <div class="topbar__search-results">
+                        <ul>
+                            <li ng-repeat='artist in vm.artists'><a ng-click="vm.clearSearch()" href="#!/artist/{{artist.mbid}}/{{artist.name}}"><img src="{{artist.image}}">{{artist.name}}</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

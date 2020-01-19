@@ -1,0 +1,130 @@
+<div class="hero hero--home">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="hero__title">BEM VINDO AO SPOT.FM</h1>
+                <p class="hero__description">Reunimos todos os seus serviços musicais preferidos e nos juntamos a eles, ouvindo, assistindo e compartilhando para conectar o seu mundo musical.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="top5 artist-list">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title-default title-default--dark"><span class="title-default__highlight">Artistas</span> mais escutados</h2>
+            </div>
+        </div>
+
+        <div class="row no-gutters" >
+
+            <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-xs-6" 
+                ng-class="$index < 2 ? 'col-md-6': 'col-md-4'"
+                ng-repeat="data in vm.topArtists">
+
+                <a class="artist-list__artist-link" href="#!/artist/{{data.id}}/{{data.name | escape }}">
+                    <div class="artist artist--top5" ng-style="{
+                        'background-image': 'url('+data.image+')'}">
+                        <div class="artist__description artist__description--top5">
+                            <div class="artist__description__name artist__description__name--top5">{{data.name}}</div>
+                            <div class="artist__description__count">{{data.listeners | number}} ouvintes</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="top-songs">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                    <h2 class="title-default title-default--light"><span class="title-default__highlight">Músicas</span> mais escutadas</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div id="top-songs-carousel" class="carousel slide" data-ride="carousel">
+                    
+                    <ol class="carousel-indicators">
+                        <li data-target="#top-songs-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#top-songs-carousel" data-slide-to="1"></li>
+                        <li data-target="#top-songs-carousel" data-slide-to="2"></li>
+                    </ol>
+                    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4" ng-repeat="data in vm.topTracks" ng-show="$index >= 0 && $index <= 2">
+
+                                    <div class="song">
+                                        <div class="song__artist__image">
+                                            <img src="{{data.image}}" alt="{{data.name}}">
+                                        </div>
+
+                                        <div class="song__description">
+                                            <div class="song__name">{{data.name}}</div>
+                                            <div class="song__artist">{{data.artist}}</div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4" ng-repeat="data in vm.topTracks" ng-show="$index >= 3 && $index <= 5">
+
+                                    <div class="song">
+                                        <div class="song__artist__image">
+                                            <img src="{{data.image}}" alt="{{data.name}}">
+                                        </div>
+
+                                        <div class="song__description">
+                                            <div class="song__name">{{data.name}}</div>
+                                            <div class="song__artist">{{data.artist}}</div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-sm-offset-2 col-md-offset-0 col-sm-8 col-md-4" ng-repeat="data in vm.topTracks" ng-show="$index >= 6 && $index <= 8">
+
+                                    <div class="song">
+                                        <div class="song__artist__image">
+                                            <img src="{{data.image}}" alt="{{data.name}}">
+                                        </div>
+
+                                        <div class="song__description">
+                                            <div class="song__name">{{data.name}}</div>
+                                            <div class="song__artist">{{data.artist}}</div>
+                                        </div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                        
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

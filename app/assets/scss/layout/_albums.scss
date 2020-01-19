@@ -1,0 +1,31 @@
+.top-albums{
+
+    &__index {
+        padding-left: 12px;
+        color:#999999;
+    }
+
+    &__track {
+        color:#000;
+    }
+
+    &__table {
+        width:100%;
+    }
+
+    &__table tr > td
+    {
+        vertical-align: middle;
+        padding: 8px 0px 4px 10px;
+    } 
+
+    &__table tr {
+        border-bottom:1px solid #ebebeb;
+        @include fontLight();
+    }
+
+    &__table tr:nth-child(even) {
+        background:#f9f9f9;
+    }
+
+}
